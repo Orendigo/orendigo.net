@@ -3,30 +3,25 @@
     src: url("../fonts/clacon.ttf");
 }
 
-@mixin rings($duration, $delay) {
-    opacity: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: -8px;
-    left: -8px;
-    right: 0;
-    bottom: 0;
-    content: '';
-    height: 100%;
-    width: 100%;
-    border: 8px solid rgba(0,0,0,0.2);
-    border-radius: 100%;
-    animation-name: ripple;
-    animation-duration: $duration;
-    animation-delay: $delay;
-    animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(.65,0,.34,1);
-    z-index: -1;
+/*Custom Scroll*/
+::-webkit-scrollbar {
+  width: 10px;
 }
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #532d8e;
+  
+}
+::-webkit-scrollbar-thumb {
+  background: #191313;
+  
+}
+::-webkit-scrollbar-track-piece {
+	background: #532d8e;
+}
+
+/*https://cssgradient.io/*/
 .body {
+	overflow-x: hidden;
 	background: rgb(25,19,19);
 	background: -moz-linear-gradient(90deg, rgba(25,19,19,1) 5%, rgba(46,27,70,1) 35%, rgba(83,45,142,1) 100%);
 	background: -webkit-linear-gradient(90deg, rgba(25,19,19,1) 5%, rgba(46,27,70,1) 35%, rgba(83,45,142,1) 100%);
@@ -65,26 +60,6 @@
 	left: 200px;
 	top: 95px;
 }
-#front-code-4 {
-	position: absolute;
-	left: 225px;
-	top: 125px;
-	font-size: 50px;
-	color: #B4B4B4;
-}
-#front-code-4:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-#front-code-4 > p {
-	float: left;
-}
-#front-code-4 > p:hover {
-	float: left;
-	color: #494949;
-	@include rings(3s, 0s);
-}
 #front-code-5 {
 	position: absolute;
 	left: 200px;
@@ -99,6 +74,26 @@
 	position: absolute;
 	left: 150px;
 	top: 255px;
+}
+
+#front-hello-world {
+	position: absolute;
+	left: 225px;
+	top: 125px;
+	font-size: 50px;
+	color: #B4B4B4;
+}
+#front-hello-world:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+#front-hello-world > p {
+	float: left;
+}
+#front-hello-world > p:hover {
+	float: left;
+	color: #494949;
 }
 
 /*Side Navigation Div*/
@@ -131,16 +126,4 @@
 li a {
 	color: #FFFFFF;
 	text-decoration: none;
-}
-
-@keyframes ripple {
-  from {
-    opacity: 1;
-    transform: scale3d(0.75,0.75,1);
-  }
-  
-  to {
-    opacity: 0;
-    transform: scale3d(1.5,1.5,1);
-  }
 }
