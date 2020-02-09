@@ -14,15 +14,35 @@
 		</div>
 
 		<div class="front">
+			
 			<div class="front-java">
-				<p id="front-code-1">class Portfolio {</p>
-				<p id="front-code-2">public static void main(String[] args) {</p>
-				<p id="front-code-3">System.out.println(</p>
-				<p id="front-code-5">);</p>
-				<p id="front-code-6">}</p>
-				<p id="front-code-7">}</p>
+				<p id="front-java-1">class Portfolio {</p>
+				<p id="front-java-2">public static void main(String[] args) {</p>
+				<p id="front-java-3">System.out.println(</p>
+				<p id="front-java-5">);</p>
+				<p id="front-java-6">}</p>
+				<p id="front-java-7">}</p>
 			</div>
 			
+			
+			<div class="front-C">
+				<p id="front-C-1">include &lt;stdio.h&gt;</p>
+				<p id="front-C-2">int main() {</p>
+				<p id="front-C-3">printf(</p>
+				<p id="front-C-5">);</p>
+				<p id="front-C-6">return 0;</p>
+				<p id="front-C-7">}</p>
+			</div>
+			
+			<div class="front-CC">
+				<p id="front-CC-1">include &lt;iostream&gt;</p>
+				<p id="front-CC-2">int main() {</p>
+				<p id="front-CC-3">std::cout <<</p>
+				<p id="front-CC-5">;</p>
+				<p id="front-CC-6">return 0;</p>
+				<p id="front-CC-7">}</p>
+			</div>
+
 			<div id="front-hello-world">
 					<p>"</p>
 					<p>H</p>
@@ -62,5 +82,42 @@
 	</body>
 </html>
 
+<script type="text/javascript">
+	var fadeElements = [document.querySelector('.front-java'), document.querySelector('.front-CC'), document.querySelector('.front-C')];
+
+	var textFade = [
+		{opacity: 100, filter: 'blur(0)'},
+		{opacity: 0, filter: 'blur(12px)'}
+	];
+	var textFadeOutTiming = {
+		duration: 5010,
+		iterations: 1,
+		easing: 'cubic-bezier(0.550, 0.085, 0.680, 0.530)'
+	};
+	var textFadeInTiming = {
+		duration: 5010,
+		iterations: 1,
+		direction: 'reverse',
+		easing: 'cubic-bezier(0.550, 0.085, 0.680, 0.530)'
+	};
+
+	window.onload = function start() {
+    	codeFade();
+	}
+
+	function codeFade() {
+		var FadeOut = 0;
+		var animation = fadeElements[FadeOut].animate(textFade, textFadeOutTiming);
+		animation.pause();
+		window.setInterval(function () {
+			animation.pause();
+			animation = fadeElements[FadeOut].animate(textFade, textFadeOutTiming);
+			FadeOut = (FadeOut + 1) % 3;
+
+		}, 5000);
+		
+	}
+
+</script>
 
 

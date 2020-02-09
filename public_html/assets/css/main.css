@@ -44,35 +44,109 @@
 	user-select:none;
 	-o-user-select:none;
 }
+/*
+.front-CC {
+	animation: text-blur-out 5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+*/
 
-#front-code-1 {
+@keyframes text-blur-out {
+  0% {
+    filter: blur(0.01);
+  }
+  100% {
+    filter: blur(12px) opacity(0%);
+  }
+}
+
+#front-java-1 {
 	position: absolute;
 	left: 150px;
 	top: 25px;
 }
-#front-code-2 {
+#front-java-2 {
 	position: absolute;
 	left: 175px;
 	top: 60px;
 }
-#front-code-3 {
+#front-java-3 {
 	position: absolute;
 	left: 200px;
 	top: 95px;
 }
-#front-code-5 {
+#front-java-5 {
 	position: absolute;
 	left: 200px;
 	top: 195px;
 }
-#front-code-6 {
+#front-java-6 {
 	position: absolute;
 	left: 175px;
 	top: 225px;
 }
-#front-code-7 {
+#front-java-7 {
 	position: absolute;
 	left: 150px;
+	top: 255px;
+}
+#front-C-1 {
+	position: absolute;
+	left: 175px;
+	top: 25px;
+}
+#front-C-2 {
+	position: absolute;
+	left: 175px;
+	top: 60px;
+}
+#front-C-3 {
+	position: absolute;
+	left: 200px;
+	top: 95px;
+}
+#front-C-5 {
+	position: absolute;
+	left: 200px;
+	top: 195px;
+}
+#front-C-6 {
+	position: absolute;
+	left: 200px;
+	top: 225px;
+}
+#front-C-7 {
+	position: absolute;
+	left: 175px;
+	top: 255px;
+}
+#front-CC-1 {
+	position: absolute;
+	left: 175px;
+	top: 25px;
+}
+#front-CC-2 {
+	position: absolute;
+	left: 175px;
+	top: 60px;
+}
+#front-CC-3 {
+	position: absolute;
+	left: 200px;
+	top: 95px;
+}
+#front-CC-5 {
+	position: absolute;
+	left: 200px;
+	top: 195px;
+}
+#front-CC-6 {
+	position: absolute;
+	left: 200px;
+	top: 225px;
+}
+#front-CC-7 {
+	position: absolute;
+	left: 175px;
 	top: 255px;
 }
 
