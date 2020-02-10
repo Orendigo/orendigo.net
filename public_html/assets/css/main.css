@@ -19,6 +19,9 @@
 	background: #532d8e;
 }
 
+@media screen and (max-height: 450px) {
+}
+
 /*https://cssgradient.io/*/
 .body {
 	overflow-x: hidden;
@@ -35,7 +38,7 @@
 	width: 100vw;
 	position: absolute;
 	font-family: 'clacon', monospace;
-	font-size: 35px;
+	font-size: 45px;
 	color: #494949;
 
 	-moz-user-select: none;
@@ -43,6 +46,10 @@
 	-ms-user-select:none;
 	user-select:none;
 	-o-user-select:none;
+}
+
+.profileImage {
+
 }
 
 #front-java-1 {
@@ -135,11 +142,41 @@
 	left: 175px;
 	top: 255px;
 }
+#front-html-1 {
+	position: absolute;
+	left: 150px;
+	top: 25px;
+}
+#front-html-2 {
+	position: absolute;
+	left: 175px;
+	top: 60px;
+}
+#front-html-3 {
+	position: absolute;
+	left: 175px;
+	top: 95px;
+}
+#front-html-5 {
+	position: absolute;
+	left: 175px;
+	top: 195px;
+}
+#front-html-6 {
+	position: absolute;
+	left: 150px;
+	top: 230px;
+}
+#front-html-7 {
+	position: absolute;
+	left: 175px;
+	top: 255px;
+}
 
 #front-hello-world {
 	position: absolute;
 	left: 225px;
-	top: 125px;
+	top: 140px;
 	font-size: 50px;
 	color: #B4B4B4;
 }
@@ -153,7 +190,7 @@
 }
 #front-hello-world > p:hover {
 	float: left;
-	color: #494949;
+	color: #532d8e;
 }
 
 
@@ -164,7 +201,7 @@
 	padding: 0;
 	width: 60px;
 	background-color: #191313;
-	position: absolute;
+	position: fixed;
 	height: 100%;
 }
 
@@ -172,7 +209,7 @@
 	margin: 0;
 	padding: 0;
 	position: relative;
-	top: 40%;
+	top: 30%;
 }
 
 #side-nav-list li {
@@ -184,31 +221,47 @@
 }
 
 #side-nav-list li, #side-nav-list a {
-	height: 50px;
 	display: block;
+	padding-top: 3px;
+}
+.active {
+	filter: invert(20%) sepia(76%) saturate(14530%) hue-rotate(242deg) brightness(88%) contrast(99%);
+}
+.side-nav-a {
+	position: relative;
+	z-index: 1;
+}
+.side-nav-span {
+	position: relative;
+	padding-left: 7px;
+}
+.side-nav-svg {
+	position: relative;
+	z-index: -1;
 }
 
-#home {
-	width: 50px;
-	background: url('../img/Compass.svg') 0 0;
+/*https://codepen.io/sosuke/pen/Pjoqqp
+.side-nav-span:hover {
+	filter: invert(20%) sepia(17%) saturate(6130%) hue-rotate(243deg) brightness(45%) contrast(98%) blur(3px);;
 }
-#about {
-	width: 50px;
-	background: url('../img/Book.svg') 0 0;
-}
-#skills {
-	width: 50px;
-	background: url('../img/wrench.svg') 0 0;
-}
-#contact {
-	width: 50px;
-	background: url('../img/email.svg') 0 0;
-}
-#projects {
-	width: 50px;
-	background: url('../img/gears.svg') 0 0;
+*/
+
+.side-nav-text {
+	position: absolute;
+	text-align: center;
+	z-index: 1;
+	top: 10px;
+	font-family: 'clacon', monospace;
+	font-size: 23px;
+	color: white;
+	opacity: 0;
 }
 
+#side-nav-home-text { left: 9px;}
+#side-nav-about-text { left: 5px;}
+#side-nav-skills-text { left: 3px;}
+#side-nav-projects-text { left: -5px;}
+#side-nav-contact-text { left: -2px;}
 
 li a {
 	color: #FFFFFF;

@@ -24,7 +24,6 @@
 				<p id="front-java-7">}</p>
 			</div>
 			
-			
 			<div class="front-C" style="opacity: 1; filter: blur(12px)">
 				<p id="front-C-1">include &lt;stdio.h&gt;</p>
 				<p id="front-C-2">int main() {</p>
@@ -34,13 +33,22 @@
 				<p id="front-C-7">}</p>
 			</div>
 			
-			<div class="front-CC" style="opacity: 0; filter: blur(12px)">
+			<div class="front-CC" style="opacity: 1; filter: blur(12px)">
 				<p id="front-CC-1">include &lt;iostream&gt;</p>
 				<p id="front-CC-2">int main() {</p>
-				<p id="front-CC-3">std::cout <<</p>
+				<p id="front-CC-3">std::cout &lt;&lt;</p>
 				<p id="front-CC-5">;</p>
 				<p id="front-CC-6">return 0;</p>
 				<p id="front-CC-7">}</p>
+			</div>
+
+			<div class="front-html" style="opacity: 1; filter: blur(12px)">
+				<p id="front-html-1">&lt;html&gt;</p>
+				<p id="front-html-2">&lt;title&gt; Portfolio &lt;/title&gt;</p>
+				<p id="front-html-3">&lt;body&gt;</p>
+				<p id="front-html-5">&lt;/body&gt;</p>
+				<p id="front-html-6">&lt;/html&gt;</p>
+				<p id="front-html-7"></p>
 			</div>
 
 			<div id="front-hello-world">
@@ -60,23 +68,69 @@
 					<p>"</p>
 			</div>
 		</div>
+
+		
 		
 		<div class="side-nav">
+			<div id="side-nav-bar"></div>
 			<div class="side-nav-header">
 				
 			</div>
 			<ul id="side-nav-list">
-				<li><a class="active" id= "home" href="#home"></a></li>
-				<li><a id="about" href="#about"></a></li>
-				<li><a id="skills" href="#skills"></a></li>
-				<li><a id="projects" href="#projects"></a></li>
-				<li><a id="contact" href="#contact"></a></li>
+				<li>
+					<a class="side-nav-a" href="#home" onmouseover="iconHover(true, 'side-nav-home-text')" onmouseout="iconHover(false, 'side-nav-home-text')">
+						<div class="side-nav-text" id="side-nav-home-text">home</div>
+						<span class="side-nav-span">
+							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/home.svg" width=40 height=40>
+							</object>
+						</span>	
+					</a>
+				</li>
+
+				<li>
+					<a class="side-nav-a" href="#about" onmouseover="iconHover(true, 'side-nav-about-text')" onmouseout="iconHover(false, 'side-nav-about-text')">
+						<div class="side-nav-text" id="side-nav-about-text">about</div>
+						<span class="side-nav-span">
+							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/person.svg" width=40 height=40>
+							</object>	
+						</span>	
+					</a>
+				</li>
+
+				<li>
+					<a class="side-nav-a" href="#skills" onmouseover="iconHover(true, 'side-nav-skills-text')" onmouseout="iconHover(false, 'side-nav-skills-text')">
+						<div class="side-nav-text" id="side-nav-skills-text">skills</div>
+						<span class="side-nav-span">
+							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/code.svg" width=40 height=40>
+							</object>	
+						</span>	
+					</a>
+				</li>
+
+				<li>
+					<a class="side-nav-a" href="#projects" onmouseover="iconHover(true, 'side-nav-projects-text')" onmouseout="iconHover(false, 'side-nav-projects-text')">
+						<div class="side-nav-text" id="side-nav-projects-text">projects</div>
+						<span class="side-nav-span">
+							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/extension.svg" width=40 height=40>
+							</object>	
+						</span>	
+					</a>
+				</li>
+
+				<li>
+					<a class="side-nav-a" href="#contact" onmouseover="iconHover(true, 'side-nav-contact-text')" onmouseout="iconHover(false, 'side-nav-contact-text')">
+						<div class="side-nav-text" id="side-nav-contact-text">contact</div>
+						<span class="side-nav-span">
+							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/mail.svg" width=40 height=40>
+							</object>	
+						</span>	
+					</a>
+				</li>
 			</ul>
 			<div class="side-nav-footer">
 				
 			</div>
 		</div>
-		
 		
 
 
@@ -102,6 +156,7 @@
 
 	var fadeElem = [
 		document.querySelector('.front-java'), 
+		document.querySelector('.front-html'),
 		document.querySelector('.front-CC'), 
 		document.querySelector('.front-C')
 	];
@@ -122,9 +177,9 @@
 		window.setInterval(function () {
 			animation1.pause();
 			animation2.pause();
-			if ( (counter + 1) % 3 == 0 ) {
+			if ( (counter + 1) % 4 == 0 ) {
 				animation1 = fadeElem[fade].animate(textFade, textFadeOutTiming);
-				fade = (fade + 1) % 3;
+				fade = (fade + 1) % 4;
 				animation2 = fadeElem[fade].animate(textFade, textFadeInTiming);
 				counter = 0;
 			}
@@ -133,6 +188,20 @@
 			}
 
 		}, 5000);
+		
+	}
+
+	function iconHover(within, elem) {
+		var text = document.querySelector('#' + elem);
+		var icon = document.querySelector('#' + elem + ' + span')
+		if (within) {
+			text.style.opacity = "100";
+			icon.style.webkitFilter = "invert(20%) sepia(17%) saturate(6130%) hue-rotate(243deg) brightness(45%) contrast(98%) blur(2px)";	
+		}
+		else {
+			text.style.opacity = "0";
+			icon.style.webkitFilter = "none";
+		}
 		
 	}
 
