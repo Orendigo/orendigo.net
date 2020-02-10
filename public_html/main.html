@@ -25,7 +25,7 @@
 			</div>
 			
 			
-			<div class="front-C">
+			<div class="front-C" style="opacity: 1; filter: blur(12px)">
 				<p id="front-C-1">include &lt;stdio.h&gt;</p>
 				<p id="front-C-2">int main() {</p>
 				<p id="front-C-3">printf(</p>
@@ -34,7 +34,7 @@
 				<p id="front-C-7">}</p>
 			</div>
 			
-			<div class="front-CC">
+			<div class="front-CC" style="opacity: 0; filter: blur(12px)">
 				<p id="front-CC-1">include &lt;iostream&gt;</p>
 				<p id="front-CC-2">int main() {</p>
 				<p id="front-CC-3">std::cout <<</p>
@@ -83,41 +83,59 @@
 </html>
 
 <script type="text/javascript">
-	var fadeElements = [document.querySelector('.front-java'), document.querySelector('.front-CC'), document.querySelector('.front-C')];
-
 	var textFade = [
-		{opacity: 100, filter: 'blur(0)'},
-		{opacity: 0, filter: 'blur(12px)'}
+	{opacity: 100, filter: 'blur(0)'},
+	{opacity: 1, filter: 'blur(12px)'}
 	];
 	var textFadeOutTiming = {
-		duration: 5010,
+		duration: 5030,
 		iterations: 1,
 		easing: 'cubic-bezier(0.550, 0.085, 0.680, 0.530)'
 	};
 	var textFadeInTiming = {
-		duration: 5010,
+		duration: 5030,
 		iterations: 1,
 		direction: 'reverse',
 		easing: 'cubic-bezier(0.550, 0.085, 0.680, 0.530)'
 	};
+
+	var fadeElem = [
+		document.querySelector('.front-java'), 
+		document.querySelector('.front-CC'), 
+		document.querySelector('.front-C')
+	];
 
 	window.onload = function start() {
     	codeFade();
 	}
 
 	function codeFade() {
-		var FadeOut = 0;
-		var animation = fadeElements[FadeOut].animate(textFade, textFadeOutTiming);
-		animation.pause();
+		var fade = 0;
+		var counter = 0;
+		// useless code to prevent loop from erroring
+		animation1 = fadeElem[fade].animate(textFade, textFadeOutTiming);
+		animation2 = fadeElem[fade].animate(textFade, textFadeOutTiming);
+		animation1.pause();
+		animation2.pause();
+
 		window.setInterval(function () {
-			animation.pause();
-			animation = fadeElements[FadeOut].animate(textFade, textFadeOutTiming);
-			FadeOut = (FadeOut + 1) % 3;
+			animation1.pause();
+			animation2.pause();
+			if ( (counter + 1) % 3 == 0 ) {
+				animation1 = fadeElem[fade].animate(textFade, textFadeOutTiming);
+				fade = (fade + 1) % 3;
+				animation2 = fadeElem[fade].animate(textFade, textFadeInTiming);
+				counter = 0;
+			}
+			else {
+				counter++;
+			}
 
 		}, 5000);
 		
 	}
-	
+
+
 </script>
 
 
