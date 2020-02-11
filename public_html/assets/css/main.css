@@ -32,7 +32,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#191313",endColorstr="#532d8e",GradientType=1);
 }
 
-.front {
+.home {
 	margin: 0;
 	padding: 0;
 	width: 100vw;
@@ -48,158 +48,159 @@
 	-o-user-select:none;
 }
 
-.profileImage {
+.profile-image {
+	position: absolute;
+	right: 15%;
+	top: 175px;
+	transform: rotate(10deg);
+}
+.profile-image:hover {
+	filter: invert(20%) sepia(17%) saturate(6130%) hue-rotate(243deg) brightness(45%) contrast(98%);
+}
 
-}
-
-#front-java-1 {
+#home-java-1 {
 	position: absolute;
 	left: 150px;
 	top: 25px;
 }
-#front-java-2 {
+#home-java-2 {
 	position: absolute;
 	left: 175px;
 	top: 60px;
 }
-#front-java-3 {
+#home-java-3 {
 	position: absolute;
 	left: 200px;
 	top: 95px;
 }
-#front-java-5 {
+#home-java-5 {
 	position: absolute;
 	left: 200px;
 	top: 195px;
 }
-#front-java-6 {
+#home-java-6 {
 	position: absolute;
 	left: 175px;
 	top: 225px;
 }
-#front-java-7 {
+#home-java-7 {
 	position: absolute;
 	left: 150px;
 	top: 255px;
 }
-#front-C-1 {
+#home-c-1 {
 	position: absolute;
 	left: 175px;
 	top: 25px;
 }
-#front-C-2 {
+#home-c-2 {
 	position: absolute;
 	left: 175px;
 	top: 60px;
 }
-#front-C-3 {
+#home-c-3 {
 	position: absolute;
 	left: 200px;
 	top: 95px;
 }
-#front-C-5 {
+#home-c-5 {
 	position: absolute;
 	left: 200px;
 	top: 195px;
 }
-#front-C-6 {
+#home-c-6 {
 	position: absolute;
 	left: 200px;
 	top: 225px;
 }
-#front-C-7 {
+#home-c-7 {
 	position: absolute;
 	left: 175px;
 	top: 255px;
 }
-#front-CC-1 {
+#home-cc-1 {
 	position: absolute;
 	left: 175px;
 	top: 25px;
 }
-#front-CC-2 {
+#home-cc-2 {
 	position: absolute;
 	left: 175px;
 	top: 60px;
 }
-#front-CC-3 {
+#home-cc-3 {
 	position: absolute;
 	left: 200px;
 	top: 95px;
 }
-#front-CC-5 {
+#home-cc-5 {
 	position: absolute;
 	left: 200px;
 	top: 195px;
 }
-#front-CC-6 {
+#home-cc-6 {
 	position: absolute;
 	left: 200px;
 	top: 225px;
 }
-#front-CC-7 {
+#home-cc-7 {
 	position: absolute;
 	left: 175px;
 	top: 255px;
 }
-#front-html-1 {
+#home-html-1 {
 	position: absolute;
 	left: 150px;
 	top: 25px;
 }
-#front-html-2 {
+#home-html-2 {
 	position: absolute;
 	left: 175px;
 	top: 60px;
 }
-#front-html-3 {
+#home-html-3 {
 	position: absolute;
 	left: 175px;
 	top: 95px;
 }
-#front-html-5 {
+#home-html-5 {
 	position: absolute;
 	left: 175px;
 	top: 195px;
 }
-#front-html-6 {
+#home-html-6 {
 	position: absolute;
 	left: 150px;
 	top: 230px;
 }
-#front-html-7 {
+#home-html-7 {
 	position: absolute;
 	left: 175px;
 	top: 255px;
 }
 
-#front-hello-world {
+#home-hello-world {
 	position: absolute;
 	left: 225px;
 	top: 140px;
 	font-size: 50px;
 	color: #B4B4B4;
 }
-#front-hello-world:after {
+#home-hello-world:after {
 	content: "";
 	display: table;
 	clear: both;
 }
-#front-hello-world > p {
+#home-hello-world > p {
 	float: left;
 }
-#front-hello-world > p:hover {
-	float: left;
+#home-hello-world > p:hover {
 	color: #532d8e;
 }
 
 
 /*Side Navigation Div*/
 .side-nav {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	width: 60px;
 	background-color: #191313;
 	position: fixed;
 	height: 100%;
@@ -210,14 +211,6 @@
 	padding: 0;
 	position: relative;
 	top: 30%;
-}
-
-#side-nav-list li {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	position: relative;
-	top: 0;
 }
 
 #side-nav-list li, #side-nav-list a {
