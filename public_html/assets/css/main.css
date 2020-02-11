@@ -243,18 +243,18 @@
 	position: absolute;
 	text-align: center;
 	z-index: 1;
-	top: 10px;
+	
 	font-family: 'clacon', monospace;
 	font-size: 23px;
 	color: white;
 	opacity: 0;
 }
 
-#side-nav-home-text { left: 9px;}
-#side-nav-about-text { left: 5px;}
-#side-nav-skills-text { left: 3px;}
-#side-nav-projects-text { left: -5px;}
-#side-nav-contact-text { left: -2px;}
+#side-nav-home-text { left: 14px; top: 15px;}
+#side-nav-about-text { left: 9px; top: 17px;}
+#side-nav-skills-text { left: 5px; top: 15px;}
+#side-nav-projects-text { left: -5px; top: 15px;}
+#side-nav-contact-text { left: 0px; top: 10px;}
 
 li a {
 	color: #FFFFFF;

@@ -142,26 +142,9 @@
 	</body>
 </html>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
 
 <script type="text/javascript">
-	// to do, replace web animation api with anime.js ?
-	// web animation api does not support edge :shrug:
-	var textFade = [
-	{opacity: 100, filter: 'blur(0)'},
-	{opacity: 1, filter: 'blur(12px)'}
-	];
-	var textFadeOutTiming = {
-		duration: 5050,
-		iterations: 1,
-		easing: 'cubic-bezier(0.550, 0.085, 0.680, 0.530)'
-	};
-	var textFadeInTiming = {
-		duration: 5050,
-		iterations: 1,
-		direction: 'reverse',
-		easing: 'cubic-bezier(0.550, 0.085, 0.680, 0.530)'
-	};
-
 	var fadeElem = [
 		document.querySelector('.home-java'), 
 		document.querySelector('.home-html'),
@@ -175,20 +158,13 @@
 
 	function codeFade() {
 		var fade = 0;
-		var counter = 0;
-		// useless code to prevent loop from erroring
-		animation1 = fadeElem[fade].animate(textFade, textFadeOutTiming);
-		animation2 = fadeElem[fade].animate(textFade, textFadeOutTiming);
-		animation1.pause();
-		animation2.pause();
+		var counter = 2;
 
 		window.setInterval(function () {
-			animation1.pause();
-			animation2.pause();
 			if ( (counter + 1) % 4 == 0 ) {
-				animation1 = fadeElem[fade].animate(textFade, textFadeOutTiming);
+				gsap.fromTo(fadeElem[fade], 15, {css:{opacity: "100", filter: "blur(0)"}}, {css:{opacity: "1", filter: "blur(12px)"}, duration: 1, ease: "power2.out"});
 				fade = (fade + 1) % 4;
-				animation2 = fadeElem[fade].animate(textFade, textFadeInTiming);
+				gsap.fromTo(fadeElem[fade], 15, {css:{opacity: "1", filter: "blur(12px)"}}, {css:{opacity: "100", filter: "blur(0px)"}, duration: 1, ease: "power2.out"});
 				counter = 0;
 			}
 			else {
@@ -196,7 +172,6 @@
 			}
 
 		}, 5000);
-		
 	}
 
 	function iconHover(within, elem) {
@@ -211,10 +186,6 @@
 			icon.style.webkitFilter = "none";
 		}
 	}
-
-
-
-
 
 </script>
 
