@@ -182,7 +182,7 @@ html {
 	text-shadow: 4px 4px black;
 	position: absolute;
 	top: 110%;
-	left: 15%;
+	left: 20%;
 	width: 500px;
 }
 
@@ -212,9 +212,44 @@ html {
     height: 1px;
 }
 
-.poly-image-svg {
+#about-poly-logo {
 	position: absolute;
-	width: 23%;
-	top: 115%;
-	right: 15%;
+	overflow: visible;
+	top: 130%;
+	right: 25%;
+	z-index: -1;
+}
+.poly-svg {
+	position: absolute;
+	width: 20%;
+}
+.poly-svg > span > object {
+	position: absolute;
+}
+.poly-svg > span > object:hover {
+	filter: invert(20%) sepia(17%) saturate(6100%) hue-rotate(243deg) brightness(35%) contrast(100%) blur(0px);
+}
+
+#poly-image-span-1 > object {
+	top: -45px;
+	left: 100px;
+	width: 100%
+}
+#poly-image-span-2 > object {
+	top: -70px;
+	left: 113px;
+	width: 100%
+}
+#poly-image-span-3 > object {
+	top: -105px;
+	left: 127px;
+	width: 100%
+}
+#poly-image-span-4 > object {
+	top: -145px;
+	left: 148px;
+	width: 100%
+}
+.poly-image-svg-text {
+	width: 100%;
 }

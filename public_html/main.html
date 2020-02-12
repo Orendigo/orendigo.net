@@ -174,7 +174,18 @@
 				<p>&emsp;The problem-solving aspects of programming is what initially drew me into the realm of Computer Science; whether it's working out an existing problem, or creating something entirely new- there's always something interesting to be had.</p>
 				<p>&emsp;As a hobby, I enjoy working with microcontrollers, such as Arduino, to create or bring new life to electronic devices.</p>
 			</div>
+			<!--
 			<object class="poly-image-svg" type="image/svg+xml" data="assets/img/flpoly.svg"></object>
+			-->
+			<div id="about-poly-logo">
+				<div class="poly-svg">
+					<span class="poly-image-svg" id="poly-image-span-1"><object id="poly-image-1" type="image/svg+xml" data="assets/img/flpoly/1.svg" style="opacity: 0;"></object></span>
+					<span class="poly-image-svg" id="poly-image-span-2"><object id="poly-image-2" type="image/svg+xml" data="assets/img/flpoly/2.svg" style="opacity: 0;"></object></span>
+					<span class="poly-image-svg" id="poly-image-span-3"><object id="poly-image-3" type="image/svg+xml" data="assets/img/flpoly/3.svg" style="opacity: 0;"></object></span>
+					<span class="poly-image-svg" id="poly-image-span-4"><object id="poly-image-4" type="image/svg+xml" data="assets/img/flpoly/4.svg" style="opacity: 0;"></object></span>
+				</div>	
+				<object class="poly-image-svg-text" id="poly-image-text" type="image/svg+xml" data="assets/img/flpoly/text.svg" style="opacity: 0;"></object>
+			</div>
 			<p id="about"> &nbsp;</p>
 		</div>
 		
@@ -209,19 +220,31 @@
 		- Move Greetings Text (duration: 2, startAt: -2)
 		*/
 		var beginTL = gsap.timeline();
-		beginTL.fromTo(fadeElem[fade], 3, {css:{opacity: "1", filter: "blur(12px)"}}, {css:{opacity: "100", filter: "blur(0px)"}, duration: 1, ease: "power2.out"})
-			.fromTo("#home-hello-world", 2, {css:{opacity: "1", filter: "blur(12px)"}}, {css:{opacity: "100", filter: "blur(0px)"}, duration: 1, ease: "power2.out"}, "-=2")
-			.fromTo(".home-greetings-text", 2, {css:{opacity: "0", filter: "blur(12px)"}}, {css:{opacity: "100", filter: "blur(0px)"}, duration: 1, ease: "power2.out"}, "-=1")
-			.fromTo(".home-greetings-text", 2, {y:200}, {y:0}, "-=2");
+		beginTL.fromTo(fadeElem[fade], 3, // begining fadeIn of first fadeElement
+					{css:{opacity: "1", filter: "blur(12px)"}}, 
+					{css:{opacity: "100", filter: "blur(0px)"}, duration: 1, ease: "power2.out"})
+				.fromTo("#home-hello-world", 2, // fadeIn Hello World text
+					{css:{opacity: "1", filter: "blur(12px)"}}, 
+					{css:{opacity: "100", filter: "blur(0px)"}, duration: 1, ease: "power2.out"}, "-=2")
+				.fromTo(".home-greetings-text", 2, // fadeIn Greetings Text
+					{css:{opacity: "0", filter: "blur(12px)"}}, 
+					{css:{opacity: "100", filter: "blur(0px)"}, duration: 1, ease: "power2.out"}, "-=1")
+				.fromTo(".home-greetings-text", 2, // moveY Greetings Text
+					{y:200}, 
+					{y:0}, "-=2");
 
 
 		window.setInterval(function () {
 			// counter default: 2
 			// i.e. wait 2 seconds before starting loop
 			if ( (counter + 1) % 4 == 0 ) {
-				gsap.fromTo(fadeElem[fade], 15, {css:{opacity: "100", filter: "blur(0)"}}, {css:{opacity: "1", filter: "blur(12px)"}, duration: 1, ease: "power2.out"});
+				gsap.fromTo(fadeElem[fade], 15, // fadeOut current fadeElement
+					{css:{opacity: "100", filter: "blur(0)"}}, 
+					{css:{opacity: "1", filter: "blur(12px)"}, duration: 1, ease: "power2.out"});
 				fade = (fade + 1) % 4;
-				gsap.fromTo(fadeElem[fade], 15, {css:{opacity: "1", filter: "blur(12px)"}}, {css:{opacity: "100", filter: "blur(0px)"}, duration: 1, ease: "power2.out"});
+				gsap.fromTo(fadeElem[fade], 15, //fadeIn next fadeElement
+					{css:{opacity: "1", filter: "blur(12px)"}}, 
+					{css:{opacity: "100", filter: "blur(0px)"}, duration: 1, ease: "power2.out"});
 				counter = 0;
 			}
 			else {
@@ -233,8 +256,40 @@
 
 	function animParaEnter() {
 		var paraAnim = gsap.timeline();
-		paraAnim.fromTo("#about-para-1", 2, {css:{opacity: "0", filter: "blur(12px)"}}, {css:{opacity: "100", filter: "blur(0px)"}, duration: 1, ease: "power2.out"})
-					.fromTo("#about-para-1", 2, {x:-100}, {x:0, duration: 1, ease: "power2.out"}, "-=2");
+		paraAnim.fromTo("#about-para-1", 2, // fadeIn About Paragraph1
+					{css:{opacity: "0", filter: "blur(12px)"}}, 
+					{css:{opacity: "100", filter: "blur(0px)"}, duration: 1, ease: "power2.out"})
+				.fromTo("#about-para-1", 2, // moveX About Paragraph1
+					{x:-100}, 
+					{x:0, duration: 1, ease: "power2.out"}, "-=2")
+				.fromTo("#poly-image-1", 2, // rotate polyImage1
+					{rotation: 45},
+					{rotation: 0})
+				.fromTo("#poly-image-1", 2, // fadeIn polyImage1
+					{css:{opacity: "0", filter: "blur(12px)"}}, 
+					{css:{opacity: "100", filter: "blur(0px)"}, duration: 1, ease: "power2.out"}, "-=2")
+				.fromTo("#poly-image-2", 2, // rotate polyImage2
+					{rotation: 45},
+					{rotation: 0}, "-=2")
+				.fromTo("#poly-image-2", 2, // fadeIn polyImage2
+					{css:{opacity: "0", filter: "blur(12px)"}}, 
+					{css:{opacity: "100", filter: "blur(0px)"}, duration: 1, ease: "power2.out"}, "-=2")
+				.fromTo("#poly-image-3", 2, // rotate polyImage3
+					{rotation: 45},
+					{rotation: 0}, "-=2")
+				.fromTo("#poly-image-3", 2, // fadeIn polyImage3
+					{css:{opacity: "0", filter: "blur(12px)"}}, 
+					{css:{opacity: "100", filter: "blur(0px)"}, duration: 1, ease: "power2.out"}, "-=2")
+				.fromTo("#poly-image-4", 2, // rotate polyImage4
+					{rotation: 45},
+					{rotation: 0}, "-=2")
+				.fromTo("#poly-image-4", 2, // fadeIn polyImage4
+					{css:{opacity: "0", filter: "blur(12px)"}}, 
+					{css:{opacity: "100", filter: "blur(0px)"}, duration: 1, ease: "power2.out"}, "-=2")
+				.fromTo("#poly-image-text", 1.5, //fadeIn polyText
+					{css:{opacity: "0", filter: "blur(5px)"}}, 
+					{css:{opacity: "100", filter: "blur(0px)"}, duration: 1, ease: "power2.out"})
+				;
 
 		var scene = new ScrollMagic.Scene({
 							triggerElement: "#about-span"
