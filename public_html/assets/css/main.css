@@ -211,3 +211,10 @@ html {
     text-decoration:line-through;
     height: 1px;
 }
+
+.poly-image-svg {
+	position: absolute;
+	width: 23%;
+	top: 115%;
+	right: 15%;
+}
