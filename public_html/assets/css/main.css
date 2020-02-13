@@ -151,7 +151,7 @@ html {
 #home-html-7 {left: 175px;top: 255px;}
 
 #home-hello-world {
-	position: relative;
+	position: absolute;
 	left: 225px;
 	top: 140px;
 	font-size: 50px;
@@ -259,4 +259,37 @@ html {
 }
 .poly-image-svg-text {
 	width: 100%;
+}
+
+.lang-table {
+	position: absolute;
+	top:210%;
+	left: 18%;
+}
+.util-table {
+	position: absolute;
+	top:210%;
+	right: 18%;
+}
+
+th {
+	color: #B4B4B4;
+	font-family: 'clacon', monospace;
+	font-size: 40px;
+	text-shadow: 4px 4px black;
+	text-align: right;
+	padding-right: 25%;
+}
+
+td > img:hover {
+	filter: blur(5px);
+}
+
+#tester {
+	color: #B4B4B4;
+	font-family: 'clacon', monospace;
+	font-size: 40px;
+	position: absolute;
+	top: 240%;
+	left: 50%;
 }

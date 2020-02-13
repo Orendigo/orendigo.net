@@ -31,7 +31,7 @@
 					<a class="side-nav-a" href="#home" onmouseover="iconHover(true, 'side-nav-home-text')" onmouseout="iconHover(false, 'side-nav-home-text')">
 						<div class="side-nav-text" id="side-nav-home-text">home</div>
 						<span class="side-nav-span" style="overflow: hidden;">
-							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/home.svg">
+							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/icons/home.svg">
 							</object>
 						</span>	
 					</a>
@@ -41,7 +41,7 @@
 					<a class="side-nav-a" href="#about" onmouseover="iconHover(true, 'side-nav-about-text')" onmouseout="iconHover(false, 'side-nav-about-text')">
 						<div class="side-nav-text" id="side-nav-about-text">about</div>
 						<span class="side-nav-span">
-							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/person.svg">
+							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/icons/person.svg">
 							</object>	
 						</span>	
 					</a>
@@ -51,7 +51,7 @@
 					<a class="side-nav-a" href="#skills" onmouseover="iconHover(true, 'side-nav-skills-text')" onmouseout="iconHover(false, 'side-nav-skills-text')">
 						<div class="side-nav-text" id="side-nav-skills-text">skills</div>
 						<span class="side-nav-span">
-							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/code.svg">
+							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/icons/code.svg">
 							</object>	
 						</span>	
 					</a>
@@ -61,7 +61,7 @@
 					<a class="side-nav-a" href="#projects" onmouseover="iconHover(true, 'side-nav-projects-text')" onmouseout="iconHover(false, 'side-nav-projects-text')">
 						<div class="side-nav-text" id="side-nav-projects-text">projects</div>
 						<span class="side-nav-span">
-							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/extension.svg">
+							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/icons/extension.svg">
 							</object>	
 						</span>	
 					</a>
@@ -71,7 +71,7 @@
 					<a class="side-nav-a" href="#contact" onmouseover="iconHover(true, 'side-nav-contact-text')" onmouseout="iconHover(false, 'side-nav-contact-text')">
 						<div class="side-nav-text" id="side-nav-contact-text">contact</div>
 						<span class="side-nav-span">
-							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/mail.svg">
+							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/icons/mail.svg">
 							</object>	
 						</span>	
 					</a>
@@ -187,6 +187,48 @@
 
 		<div class="skills-div">
 			<span class="contentSeperator" id="skills"> Skills </span>
+			<span id="tester">&nbsp;</span>
+			<div class="lang-table">
+				<table border="0px">
+					<th colspan="2">
+						Languages
+					</th>
+					<tr>
+						<td align="center"><img src="assets/img/languages/python.svg" alt=""></td>
+						<td align="center"><img src="assets/img/languages/html.svg" alt="" width="100%"></td>
+					</tr>
+					<tr>
+						<td align="center"><img src="assets/img/languages/java.svg" alt="" width="50%"></td>
+						<td align="center"><img src="assets/img/languages/javascript.svg" alt=""></td>
+					</tr>
+					<tr>
+						<td align="center"><img src="assets/img/languages/c++.svg" alt="" width="40%"></td>
+						<td align="center"><img src="assets/img/languages/c.svg" alt=""></td>
+					</tr>
+				</table>
+			</div>
+			<div class="util-table">
+				<table border="0px">
+					<th align="center" colspan="3">
+						Utilities
+					</th>
+					<tr>
+						<td align="center"><img src="assets/img/utilities/git.svg" alt="" width="50%"></td>
+						<td>&nbsp;</td>
+						<td align="center"><img src="assets/img/utilities/visualstudio.svg" alt="" width="100%"></td>
+					</tr>
+					<tr>
+						<td align="center"><img src="assets/img/utilities/bash.svg" alt="" width="50%"></td>
+						<td>&nbsp;</td>
+						<td align="center"><img src="assets/img/utilities/office.svg" alt=""width="100%"></td>
+					</tr>
+					<tr>
+						<td align="center"><img src="assets/img/utilities/arduino.svg" alt="" width="80%"></td>
+						<td>&nbsp;</td>
+						<td align="center"><img src="assets/img/utilities/netbeans.svg" alt=""></td>
+					</tr>
+				</table>
+			</div>
 		</div>
 
 		<div class="projects-div">
@@ -205,7 +247,8 @@
 </html>
 
 <script type="text/javascript">
-	var controller = new ScrollMagic.Controller();
+	var aboutController = new ScrollMagic.Controller();
+	var skillsController = new ScrollMagic.Controller();
 	// Elements to fade in and out from
 	var fadeElem = [
 		document.querySelector('.home-java'), 
@@ -217,6 +260,7 @@
 	window.onload = function start() {
     	animCodeFade();
     	animAbout();
+    	animSkill();
 	}
 
 	function animCodeFade() {
@@ -319,7 +363,33 @@
 						})
 						.setTween(paraAnim)
 						.addIndicators({name: "1 (duration: 0)"})
-						.addTo(controller);
+						.addTo(aboutController);
+	}
+
+
+	function animSkillgetTween(img) {
+		var centerRect = document.getElementById("tester").getBoundingClientRect(), iconRect;
+		iconRect = img.getBoundingClientRect();
+		offsetY  = centerRect.top - iconRect.top,
+	    offsetX  = centerRect.left - iconRect.left;
+
+	    return gsap.fromTo(img, 2, 
+						{x:offsetX, y:offsetY},
+						{x: 0, y: 0, duration: 1, ease: "power2.out"});
+	}
+
+	function animSkill() {
+		skillIcons = document.querySelectorAll("td > img");
+		var skillAnim = gsap.timeline();
+		for (var i = 0; i < skillIcons.length; i++) {
+			skillAnim.add(animSkillgetTween(skillIcons[i]), "-=2")
+		}
+
+		var scene = new ScrollMagic.Scene({
+							triggerElement: "#skills"
+						})
+						.setTween(skillAnim)
+						.addTo(skillsController);
 	}
 
 	function iconHover(within, elem) {
