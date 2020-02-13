@@ -166,9 +166,9 @@
 
 		</div>
 		
-		<span class="contentSeperator" id="about-span"> About </span>
-
-		<div class="about">
+		
+		<span class="contentSeperator" id="about"> About </span>
+		<div class="about-div">
 			<div id="about-para-1">
 				<p>&emsp;I graduated Florida Polytechnic University with my Computer Science bachelor's in Winter 2019; throughout my study, I accumulated and gained educational experience in multiple programming languages, primarily: Python 3, Java, C, C++, and Javascript.</p>
 				<p>&emsp;The problem-solving aspects of programming is what initially drew me into the realm of Computer Science; whether it's working out an existing problem, or creating something entirely new- there's always something interesting to be had.</p>
@@ -186,8 +186,23 @@
 				</div>	
 				<object class="poly-image-svg-text" id="poly-image-text" type="image/svg+xml" data="assets/img/flpoly/text.svg" style="opacity: 0;"></object>
 			</div>
-			<p id="about"> &nbsp;</p>
 		</div>
+
+		<div class="skills-div">
+			<span class="contentSeperator" id="skills"> Skills </span>
+		</div>
+
+		<div class="projects-div">
+			<span class="contentSeperator" id="projects"> Projects </span>
+		</div>
+
+		<div class="contact-div">
+			<span class="contentSeperator" id="contact"> Contact </span>
+		</div>
+
+		<div id="fillerContent">&nbsp;</div>
+
+
 		
 	</body>
 </html>
@@ -204,7 +219,7 @@
 
 	window.onload = function start() {
     	animCodeFade();
-    	animParaEnter();
+    	animAbout();
 	}
 
 	function animCodeFade() {
@@ -254,7 +269,7 @@
 		}, 5000);
 	}
 
-	function animParaEnter() {
+	function animAbout() {
 		var paraAnim = gsap.timeline();
 		paraAnim.fromTo("#about-para-1", 2, // fadeIn About Paragraph1
 					{css:{opacity: "0", filter: "blur(12px)"}}, 
@@ -292,7 +307,7 @@
 				;
 
 		var scene = new ScrollMagic.Scene({
-							triggerElement: "#about-span"
+							triggerElement: "#about"
 						})
 						.setTween(paraAnim)
 						.addIndicators({name: "1 (duration: 0)"})

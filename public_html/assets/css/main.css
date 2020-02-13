@@ -169,10 +169,10 @@ html {
 
 
 
-#about {
+#about-div {
 	position: absolute;
 	left: 195px;
-	top: 195%;
+	top: 100%;
 }
 
 #about-para-1 {
@@ -186,30 +186,37 @@ html {
 	width: 500px;
 }
 
-#about-span {
+.contentSeperator {
 	text-align: center;
-	top: 103%;
 	color: #B4B4B4;
 	font-family: 'clacon', monospace;
 	font-size: 60px;
 	text-shadow: 4px 4px black;
 	left: 50%;
+	padding-top: 20px;
 	position: absolute;
 }
-
-#about-span:after {
+.contentSeperator:after {
 	position: absolute;
 	left: 105%;
     content:"\00a0\00a0\00a0\00a0\00a0";
     text-decoration:line-through;
     height: 1px;
 }
-#about-span:before {
+.contentSeperator:before {
 	position: absolute;
 	right: 110%;
     content:"\00a0\00a0\00a0\00a0\00a0";
     text-decoration:line-through;
     height: 1px;
+}
+#about {top: 100%;}
+#skills {top: 200%;}
+#projects {top: 300%;}
+#contact {top: 400%;}
+#fillerContent {
+	top:500%;
+	position: absolute;
 }
 
 #about-poly-logo {
