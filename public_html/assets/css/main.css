@@ -281,10 +281,6 @@ th {
 	padding-right: 25%;
 }
 
-td > img:hover {
-	filter: blur(5px);
-}
-
 #tester {
 	color: #B4B4B4;
 	font-family: 'clacon', monospace;
@@ -293,3 +289,26 @@ td > img:hover {
 	top: 240%;
 	left: 50%;
 }
+
+.skills-table-text {
+	color: white;
+	text-shadow: 4px 4px black;
+	font-family: 'clacon', monospace;
+	font-size: 40px;
+	position: absolute;
+	z-index: 1;
+	opacity: 0;
+}
+#python-text {top:35%; left: 35%;}
+#html-text {top:35%; left: 30%;}
+#java-text {top:45%; left: 40%;}
+#javascript-text {top:45%;}
+#cc-text {top:39%; left: 43%;}
+#c-text {top:39%; left: 45%;}
+
+#git-text {top:35%; left: 38%;}
+#visualstudio-text {top:28%;}
+#bash-text {top:40%; left: 36%;}
+#office-text {top:40%; left: 18%;}
+#arduino-text {top:39%; left: 26%;}
+#netbeans-text {top:39%; left: 10%;}

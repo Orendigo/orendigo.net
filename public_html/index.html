@@ -28,7 +28,7 @@
 				-->
 				<!-- Home Icon -->
 				<li>
-					<a class="side-nav-a" href="#home" onmouseover="iconHover(true, 'side-nav-home-text')" onmouseout="iconHover(false, 'side-nav-home-text')">
+					<a class="side-nav-a" href="#home" onmouseover="imgHover(true, 'side-nav-home-text')" onmouseout="imgHover(false, 'side-nav-home-text')">
 						<div class="side-nav-text" id="side-nav-home-text">home</div>
 						<span class="side-nav-span" style="overflow: hidden;">
 							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/icons/home.svg">
@@ -38,7 +38,7 @@
 				</li>
 				<!-- About Icon -->
 				<li>
-					<a class="side-nav-a" href="#about" onmouseover="iconHover(true, 'side-nav-about-text')" onmouseout="iconHover(false, 'side-nav-about-text')">
+					<a class="side-nav-a" href="#about" onmouseover="imgHover(true, 'side-nav-about-text')" onmouseout="imgHover(false, 'side-nav-about-text')">
 						<div class="side-nav-text" id="side-nav-about-text">about</div>
 						<span class="side-nav-span">
 							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/icons/person.svg">
@@ -48,7 +48,7 @@
 				</li>
 				<!-- Skills Icon -->
 				<li>
-					<a class="side-nav-a" href="#skills" onmouseover="iconHover(true, 'side-nav-skills-text')" onmouseout="iconHover(false, 'side-nav-skills-text')">
+					<a class="side-nav-a" href="#skills" onmouseover="imgHover(true, 'side-nav-skills-text')" onmouseout="imgHover(false, 'side-nav-skills-text')">
 						<div class="side-nav-text" id="side-nav-skills-text">skills</div>
 						<span class="side-nav-span">
 							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/icons/code.svg">
@@ -58,7 +58,7 @@
 				</li>
 				<!-- Projects Icon -->
 				<li>
-					<a class="side-nav-a" href="#projects" onmouseover="iconHover(true, 'side-nav-projects-text')" onmouseout="iconHover(false, 'side-nav-projects-text')">
+					<a class="side-nav-a" href="#projects" onmouseover="imgHover(true, 'side-nav-projects-text')" onmouseout="imgHover(false, 'side-nav-projects-text')">
 						<div class="side-nav-text" id="side-nav-projects-text">projects</div>
 						<span class="side-nav-span">
 							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/icons/extension.svg">
@@ -68,7 +68,7 @@
 				</li>
 				<!-- Contact Icon -->
 				<li>
-					<a class="side-nav-a" href="#contact" onmouseover="iconHover(true, 'side-nav-contact-text')" onmouseout="iconHover(false, 'side-nav-contact-text')">
+					<a class="side-nav-a" href="#contact" onmouseover="imgHover(true, 'side-nav-contact-text')" onmouseout="imgHover(false, 'side-nav-contact-text')">
 						<div class="side-nav-text" id="side-nav-contact-text">contact</div>
 						<span class="side-nav-span">
 							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/icons/mail.svg">
@@ -194,16 +194,34 @@
 						Languages
 					</th>
 					<tr>
-						<td align="center"><img src="assets/img/languages/python.svg" alt=""></td>
-						<td align="center"><img src="assets/img/languages/html.svg" alt="" width="100%"></td>
+						<td align="center" onmouseover="imgHover(true, 'python-text')" onmouseout="imgHover(false, 'python-text')">
+							<div class="skills-table-text" id="python-text">Python</div>
+							<img src="assets/img/languages/python.svg" alt="">
+						</td>
+						<td align="center" onmouseover="imgHover(true, 'html-text')" onmouseout="imgHover(false, 'html-text')">
+							<div class="skills-table-text" id="html-text">HTML</div>
+							<img src="assets/img/languages/html.svg" alt="" width="100%">
+						</td>
 					</tr>
 					<tr>
-						<td align="center"><img src="assets/img/languages/java.svg" alt="" width="50%"></td>
-						<td align="center"><img src="assets/img/languages/javascript.svg" alt=""></td>
+						<td align="center" onmouseover="imgHover(true, 'java-text')" onmouseout="imgHover(false, 'java-text')">
+							<div class="skills-table-text" id="java-text">Java</div>
+							<img src="assets/img/languages/java.svg" alt="" width="50%">
+						</td>
+						<td align="center" onmouseover="imgHover(true, 'javascript-text')" onmouseout="imgHover(false, 'javascript-text')">
+							<div class="skills-table-text" id="javascript-text">JavaScript</div>
+							<img src="assets/img/languages/javascript.svg" alt="">
+						</td>
 					</tr>
 					<tr>
-						<td align="center"><img src="assets/img/languages/c++.svg" alt="" width="40%"></td>
-						<td align="center"><img src="assets/img/languages/c.svg" alt=""></td>
+						<td align="center" onmouseover="imgHover(true, 'cc-text')" onmouseout="imgHover(false, 'cc-text')">
+							<div class="skills-table-text" id="cc-text">C++</div>
+							<img src="assets/img/languages/c++.svg" alt="" width="40%">
+						</td>
+						<td align="center" onmouseover="imgHover(true, 'c-text')" onmouseout="imgHover(false, 'c-text')">
+							<div class="skills-table-text" id="c-text">C</div>
+							<img src="assets/img/languages/c.svg" alt="">
+						</td>
 					</tr>
 				</table>
 			</div>
@@ -213,19 +231,37 @@
 						Utilities
 					</th>
 					<tr>
-						<td align="center"><img src="assets/img/utilities/git.svg" alt="" width="50%"></td>
+						<td align="center" onmouseover="imgHover(true, 'git-text')" onmouseout="imgHover(false, 'git-text')">
+							<div class="skills-table-text" id="git-text">Git</div>
+							<img src="assets/img/utilities/git.svg" alt="" width="50%">
+						</td>
 						<td>&nbsp;</td>
-						<td align="center"><img src="assets/img/utilities/visualstudio.svg" alt="" width="100%"></td>
+						<td align="center" onmouseover="imgHover(true, 'visualstudio-text')" onmouseout="imgHover(false, 'visualstudio-text')">
+							<div class="skills-table-text" id="visualstudio-text">Visual Studios</div>
+							<img src="assets/img/utilities/visualstudio.svg" alt="" width="100%">
+						</td>
 					</tr>
 					<tr>
-						<td align="center"><img src="assets/img/utilities/bash.svg" alt="" width="50%"></td>
+						<td align="center" onmouseover="imgHover(true, 'bash-text')" onmouseout="imgHover(false, 'bash-text')">
+							<div class="skills-table-text" id="bash-text">Bash</div>
+							<img src="assets/img/utilities/bash.svg" alt="" width="50%">
+						</td>
 						<td>&nbsp;</td>
-						<td align="center"><img src="assets/img/utilities/office.svg" alt=""width="100%"></td>
+						<td align="center" onmouseover="imgHover(true, 'office-text')" onmouseout="imgHover(false, 'office-text')">
+							<div class="skills-table-text" id="office-text">Office</div>
+							<img src="assets/img/utilities/office.svg" alt=""width="100%">
+						</td>
 					</tr>
 					<tr>
-						<td align="center"><img src="assets/img/utilities/arduino.svg" alt="" width="80%"></td>
+						<td align="center" onmouseover="imgHover(true, 'arduino-text')" onmouseout="imgHover(false, 'arduino-text')">
+							<div class="skills-table-text" id="arduino-text">Arduino</div>
+							<img src="assets/img/utilities/arduino.svg" alt="" width="80%">
+						</td>
 						<td>&nbsp;</td>
-						<td align="center"><img src="assets/img/utilities/netbeans.svg" alt=""></td>
+						<td align="center" onmouseover="imgHover(true, 'netbeans-text')" onmouseout="imgHover(false, 'netbeans-text')">
+							<div class="skills-table-text" id="netbeans-text">Netbeans</div>
+							<img src="assets/img/utilities/netbeans.svg" alt="">
+						</td>
 					</tr>
 				</table>
 			</div>
@@ -379,7 +415,7 @@
 	}
 
 	function animSkill() {
-		skillIcons = document.querySelectorAll("td > img");
+		skillIcons = document.querySelectorAll("td");
 		var skillAnim = gsap.timeline();
 		for (var i = 0; i < skillIcons.length; i++) {
 			skillAnim.add(animSkillgetTween(skillIcons[i]), "-=2")
@@ -392,13 +428,14 @@
 						.addTo(skillsController);
 	}
 
-	function iconHover(within, elem) {
+	function imgHover(within, elem) {
 		// blur icon, appear text
 		var text = document.querySelector('#' + elem);
-		var icon = document.querySelector('#' + elem + ' + span')
+		var icon = document.querySelector('#' + elem + ' + *')
 		if (within) {
 			text.style.opacity = "100";
-			icon.style.webkitFilter = "invert(20%) sepia(17%) saturate(6100%) hue-rotate(243deg) brightness(35%) contrast(100%) blur(0.01px)";	
+			//icon.style.webkitFilter = "invert(20%) sepia(17%) saturate(6100%) hue-rotate(243deg) brightness(35%) contrast(100%) blur(3px)";	
+			icon.style.webkitFilter = "invert(15%) brightness(50%) blur(3px)"
 		}
 		else {
 			text.style.opacity = "0";
