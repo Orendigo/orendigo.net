@@ -3,20 +3,27 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>orendigo.net</title>
-		<link rel="stylesheet" href="assets/css/main.css" type="text/css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" media="screen and (min-width: 1200px)" href="assets/css/theme-media-large.css" type="text/css" />
+
 		<link rel="shortcut icon" href="assets/img/favicon.ico" />
+		<!-- gsap -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+		<!--scrollmagic -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+		<!--scrollmagic gsap plugin -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+		<!-- tweenMax -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 	</head>
+
 	
-	<body class=body>
+	<body id=body>
 		<!-- Side Navigation -->
-		<div class="side-nav">
+		<div id="side-nav">
 			<!-- Side Nav Header -->
-			<div class="side-nav-header">
+			<div id="side-nav-header">
 				
 			</div>
 			
@@ -30,50 +37,35 @@
 				<li>
 					<a class="side-nav-a" href="#home" onmouseover="imgHover(true, 'side-nav-home-text')" onmouseout="imgHover(false, 'side-nav-home-text')">
 						<div class="side-nav-text" id="side-nav-home-text">home</div>
-						<span class="side-nav-span" style="overflow: hidden;">
-							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/icons/home.svg">
-							</object>
-						</span>	
+						<img src="assets/img/icons/home.svg" alt="">
 					</a>
 				</li>
 				<!-- About Icon -->
 				<li>
 					<a class="side-nav-a" href="#about" onmouseover="imgHover(true, 'side-nav-about-text')" onmouseout="imgHover(false, 'side-nav-about-text')">
 						<div class="side-nav-text" id="side-nav-about-text">about</div>
-						<span class="side-nav-span">
-							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/icons/person.svg">
-							</object>	
-						</span>	
+						<img src="assets/img/icons/person.svg" alt="">
 					</a>
 				</li>
 				<!-- Skills Icon -->
 				<li>
 					<a class="side-nav-a" href="#skills" onmouseover="imgHover(true, 'side-nav-skills-text')" onmouseout="imgHover(false, 'side-nav-skills-text')">
 						<div class="side-nav-text" id="side-nav-skills-text">skills</div>
-						<span class="side-nav-span">
-							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/icons/code.svg">
-							</object>	
-						</span>	
+						<img src="assets/img/icons/code.svg" alt="">
 					</a>
 				</li>
 				<!-- Projects Icon -->
 				<li>
 					<a class="side-nav-a" href="#projects" onmouseover="imgHover(true, 'side-nav-projects-text')" onmouseout="imgHover(false, 'side-nav-projects-text')">
 						<div class="side-nav-text" id="side-nav-projects-text">projects</div>
-						<span class="side-nav-span">
-							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/icons/extension.svg">
-							</object>	
-						</span>	
+						<img src="assets/img/icons/extension.svg" alt="">
 					</a>
 				</li>
 				<!-- Contact Icon -->
 				<li>
 					<a class="side-nav-a" href="#contact" onmouseover="imgHover(true, 'side-nav-contact-text')" onmouseout="imgHover(false, 'side-nav-contact-text')">
 						<div class="side-nav-text" id="side-nav-contact-text">contact</div>
-						<span class="side-nav-span">
-							<object class="side-nav-svg" type="image/svg+xml" data="assets/img/icons/mail.svg">
-							</object>	
-						</span>	
+						<img src="assets/img/icons/mail.svg" alt="">
 					</a>
 				</li>
 			</ul>
@@ -85,7 +77,6 @@
 		
 		<!-- Header -->
 		<div class="header">
-			
 		</div>
 		
 		<!-- Home Section -->
@@ -93,47 +84,51 @@
 			<!-- Fading Bacground Code -->
 			<div class="home-background-code">
 				<!-- Java -->
-				<div class="home-java" style="opacity: 1; filter: blur(12px)">
-					<p id="home-java-1">class Portfolio {</p>
-					<p id="home-java-2">public static void main(String[] args) {</p>
-					<p id="home-java-3">System.out.println(</p>
-					<p id="home-java-5">);</p>
-					<p id="home-java-6">}</p>
-					<p id="home-java-7">}</p>
+				<div class="home-code-container" id="home-java">
+					<p>class Portfolio {</p>
+					<p style="padding-left:1em">public static void main(String[] args) {</p>
+					<p style="padding-left:2em">System.out.println(</p>
+					<p>&nbsp;</p>
+					<p style="padding-left:2em">);</p>
+					<p style="padding-left:1em">}</p>
+					<p>}</p>
 				</div>
 
 				<!-- C -->
-				<div class="home-c" style="opacity: 1; filter: blur(12px)">
-					<p id="home-c-1">include &lt;stdio.h&gt;</p>
-					<p id="home-c-2">int main() {</p>
-					<p id="home-c-3">printf(</p>
-					<p id="home-c-5">);</p>
-					<p id="home-c-6">return 0;</p>
-					<p id="home-c-7">}</p>
+				<div class="home-code-container" id="home-c">
+					<p>include &lt;stdio.h&gt;</p>
+					<p>int main() {</p>
+					<p style="padding-left:1em">printf(</p>
+					<p>&nbsp;</p>
+					<p style="padding-left:1em">);</p>
+					<p style="padding-left:1em">return 0;</p>
+					<p>}</p>
 				</div>
 
 				<!-- C++ -->
-				<div class="home-cc" style="opacity: 1; filter: blur(12px)">
-					<p id="home-cc-1">include &lt;iostream&gt;</p>
-					<p id="home-cc-2">int main() {</p>
-					<p id="home-cc-3">std::cout &lt;&lt;</p>
-					<p id="home-cc-5">;</p>
-					<p id="home-cc-6">return 0;</p>
-					<p id="home-cc-7">}</p>
+				<div class="home-code-container" id="home-cc">
+					<p>include &lt;iostream&gt;</p>
+					<p>int main() {</p>
+					<p style="padding-left:1em">std::cout &lt;&lt;</p>
+					<p style="padding-left:1em"></p>
+					<p style="padding-left:1em">;</p>
+					<p style="padding-left:1em">return 0;</p>
+					<p>}</p>
 				</div>
 
 				<!-- html -->
-				<div class="home-html" style="opacity: 1; filter: blur(12px)">
-					<p id="home-html-1">&lt;html&gt;</p>
-					<p id="home-html-2">&lt;title&gt; Portfolio &lt;/title&gt;</p>
-					<p id="home-html-3">&lt;body&gt;</p>
-					<p id="home-html-5">&lt;/body&gt;</p>
-					<p id="home-html-6">&lt;/html&gt;</p>
-					<p id="home-html-7"></p>
+				<div class="home-code-container" id="home-html">
+					<p>&lt;html&gt;</p>
+					<p style="padding-left:1em">&lt;title&gt; Portfolio &lt;/title&gt;</p>
+					<p style="padding-left:1em">&lt;body&gt;</p>
+					<p>&nbsp;</p>
+					<p style="padding-left:1em">&lt;/body&gt;</p>
+					<p>&lt;/html&gt;</p>
+					<p></p>
 				</div>
 
 				<!-- Hello World text -->
-				<div id="home-hello-world" style="opacity: 1; filter: blur(12px)">
+				<div id="home-hello-world">
 					<span>
 						<p>"</p>
 						<p>H</p>
@@ -154,45 +149,47 @@
 			</div>
 			
 			<!-- Name Greetings text -->
-			<div class="home-greetings-text" style="opacity: 0">
+			<div id="home-greetings-text">
 				<p>Jonathan Hopper <br>
 				&nbsp;&nbsp;Software Developer</p>
 			</div>
 			
 			<!-- Profile SVG -->
-			<div class="home-profile-image">
-				<object class="profile-image-svg" type="image/svg+xml" data="assets/img/jh540x700.svg"></object>
+			<div id="home-profile-image">
+				<img id="profile-image-svg" src="assets/img/jh540x700.svg" alt="">
 			</div>
-
 		</div>
 		
-		
+		<!-- About Section -->
 		<div class="about-div">
-			<span class="contentSeperator" id="about"> About </span>
+			<span class="contentSeperator" id="about">About</span>
 			<div id="about-para-1">
 				<p>&emsp;I graduated Florida Polytechnic University with my Computer Science bachelor's in Winter 2019; throughout my study, I accumulated and gained educational experience in multiple programming languages, primarily: Python 3, Java, C, C++, and Javascript.</p>
 				<p>&emsp;The problem-solving aspects of programming is what initially drew me into the realm of Computer Science; whether it's working out an existing problem, or creating something entirely new- there's always something interesting to be had.</p>
 				<p>&emsp;As a hobby, I enjoy working with microcontrollers, such as Arduino, to create or bring new life to electronic devices.</p>
 			</div>
 			<div id="about-poly-logo">
-				<div class="poly-svg">
-					<span class="poly-image-svg" id="poly-image-span-1"><object id="poly-image-1" type="image/svg+xml" data="assets/img/flpoly/1.svg" style="opacity: 0;"></object></span>
-					<span class="poly-image-svg" id="poly-image-span-2"><object id="poly-image-2" type="image/svg+xml" data="assets/img/flpoly/2.svg" style="opacity: 0;"></object></span>
-					<span class="poly-image-svg" id="poly-image-span-3"><object id="poly-image-3" type="image/svg+xml" data="assets/img/flpoly/3.svg" style="opacity: 0;"></object></span>
-					<span class="poly-image-svg" id="poly-image-span-4"><object id="poly-image-4" type="image/svg+xml" data="assets/img/flpoly/4.svg" style="opacity: 0;"></object></span>
-				</div>	
-				<object class="poly-image-svg-text" id="poly-image-text" type="image/svg+xml" data="assets/img/flpoly/text.svg" style="opacity: 0;"></object>
+				<div id="poly-logo-parts">
+					<img id="poly-logo-arm-1" src="assets/img/flpoly/1.svg" alt="">
+					<img id="poly-logo-arm-2" src="assets/img/flpoly/2.svg" alt="">
+					<img id="poly-logo-arm-3" src="assets/img/flpoly/3.svg" alt="">
+					<img id="poly-logo-arm-4" src="assets/img/flpoly/4.svg" alt="">
+				</div>
+				<img id="poly-logo-text" src="assets/img/flpoly/text.svg" alt="">
 			</div>
 		</div>
-
+		
+		<!-- Skills Section -->
 		<div class="skills-div">
-			<span class="contentSeperator" id="skills"> Skills </span>
+			<span class="contentSeperator" id="skills">Skills</span>
 			<span id="tester">&nbsp;</span>
-			<div class="lang-table">
+			<div id="lang-table">
 				<table border="0px">
-					<th colspan="2">
-						Languages
-					</th>
+					<tr>
+						<th colspan="2">
+							Languages
+						</th>
+					</tr>
 					<tr>
 						<td align="center" onmouseover="imgHover(true, 'python-text')" onmouseout="imgHover(false, 'python-text')">
 							<div class="skills-table-text" id="python-text">Python</div>
@@ -200,13 +197,13 @@
 						</td>
 						<td align="center" onmouseover="imgHover(true, 'html-text')" onmouseout="imgHover(false, 'html-text')">
 							<div class="skills-table-text" id="html-text">HTML</div>
-							<img src="assets/img/languages/html.svg" alt="" width="100%">
+							<img src="assets/img/languages/html.svg" alt="">
 						</td>
 					</tr>
 					<tr>
 						<td align="center" onmouseover="imgHover(true, 'java-text')" onmouseout="imgHover(false, 'java-text')">
 							<div class="skills-table-text" id="java-text">Java</div>
-							<img src="assets/img/languages/java.svg" alt="" width="50%">
+							<img src="assets/img/languages/java.svg" alt="">
 						</td>
 						<td align="center" onmouseover="imgHover(true, 'javascript-text')" onmouseout="imgHover(false, 'javascript-text')">
 							<div class="skills-table-text" id="javascript-text">JavaScript</div>
@@ -216,7 +213,7 @@
 					<tr>
 						<td align="center" onmouseover="imgHover(true, 'cc-text')" onmouseout="imgHover(false, 'cc-text')">
 							<div class="skills-table-text" id="cc-text">C++</div>
-							<img src="assets/img/languages/c++.svg" alt="" width="40%">
+							<img src="assets/img/languages/c++.svg" alt="">
 						</td>
 						<td align="center" onmouseover="imgHover(true, 'c-text')" onmouseout="imgHover(false, 'c-text')">
 							<div class="skills-table-text" id="c-text">C</div>
@@ -225,39 +222,38 @@
 					</tr>
 				</table>
 			</div>
-			<div class="util-table">
+			<div id="util-table">
 				<table border="0px">
-					<th align="center" colspan="3">
-						Utilities
-					</th>
+					<tr>
+						<th align="center" colspan="3">
+							Utilities
+						</th>
+					</tr>
 					<tr>
 						<td align="center" onmouseover="imgHover(true, 'git-text')" onmouseout="imgHover(false, 'git-text')">
 							<div class="skills-table-text" id="git-text">Git</div>
-							<img src="assets/img/utilities/git.svg" alt="" width="50%">
+							<img src="assets/img/utilities/git.svg" alt="">
 						</td>
-						<td>&nbsp;</td>
 						<td align="center" onmouseover="imgHover(true, 'visualstudio-text')" onmouseout="imgHover(false, 'visualstudio-text')">
 							<div class="skills-table-text" id="visualstudio-text">Visual Studios</div>
-							<img src="assets/img/utilities/visualstudio.svg" alt="" width="100%">
+							<img src="assets/img/utilities/visualstudio.svg" alt="">
 						</td>
 					</tr>
 					<tr>
 						<td align="center" onmouseover="imgHover(true, 'bash-text')" onmouseout="imgHover(false, 'bash-text')">
 							<div class="skills-table-text" id="bash-text">Bash</div>
-							<img src="assets/img/utilities/bash.svg" alt="" width="50%">
+							<img src="assets/img/utilities/bash.svg" alt="">
 						</td>
-						<td>&nbsp;</td>
 						<td align="center" onmouseover="imgHover(true, 'office-text')" onmouseout="imgHover(false, 'office-text')">
 							<div class="skills-table-text" id="office-text">Office</div>
-							<img src="assets/img/utilities/office.svg" alt=""width="100%">
+							<img src="assets/img/utilities/office.svg" alt="">
 						</td>
 					</tr>
 					<tr>
 						<td align="center" onmouseover="imgHover(true, 'arduino-text')" onmouseout="imgHover(false, 'arduino-text')">
 							<div class="skills-table-text" id="arduino-text">Arduino</div>
-							<img src="assets/img/utilities/arduino.svg" alt="" width="80%">
+							<img src="assets/img/utilities/arduino.svg" alt="">
 						</td>
-						<td>&nbsp;</td>
 						<td align="center" onmouseover="imgHover(true, 'netbeans-text')" onmouseout="imgHover(false, 'netbeans-text')">
 							<div class="skills-table-text" id="netbeans-text">Netbeans</div>
 							<img src="assets/img/utilities/netbeans.svg" alt="">
@@ -265,184 +261,185 @@
 					</tr>
 				</table>
 			</div>
+			<div id="skills-paragraph">
+				<p>Here are a variety of skills and utilities I have knowledge in.  In addition to these, I also have experience in SQL queries, Virtual Box, and various Abobe products.</p>
+			</div>
 		</div>
 
+		<!-- Projects Section -->
 		<div class="projects-div">
-			<span class="contentSeperator" id="projects"> Projects </span>
+			<span class="contentSeperator" id="projects">Projects</span>
 		</div>
 
+		<!-- Contact Section -->
 		<div class="contact-div">
-			<span class="contentSeperator" id="contact"> Contact </span>
+			<span class="contentSeperator" id="contact">Contact</span>
 		</div>
-
+		
+		<!-- Filler content to jump to for contact section -->
 		<div id="fillerContent">&nbsp;</div>
 
-
-		
 	</body>
+
+	<script language="javascript" type="text/javascript">
+		// initializing scrollMagic controllers
+		var aboutController = new ScrollMagic.Controller();
+		var skillsController = new ScrollMagic.Controller();
+		
+		// fade elements for fading code
+		var fadeElem = document.querySelectorAll('.home-code-container');
+
+		// on first load
+		window.onload = function start() {
+	    	animCodeFade();
+	    	animAbout();
+	    	animSkill();
+		}
+
+		// fading code animation
+		function animCodeFade() {
+			/*
+			gsap Begining Timeline:
+			- Fade in Java Code (duration: 3)
+			- Fade in Hello World (duration: 2, startAt: -2)
+			- Fade in Greetings Text (duration: 2, startAt: -1)
+			- Move Greetings Text (duration: 2, startAt: -2)
+			*/
+			var beginTL = gsap.timeline();
+			beginTL.fromTo(fadeElem[0], 3, // begining fadeIn of first fadeElement
+						{css:{opacity: "1", filter: "blur(12px)"}}, 
+						{css:{opacity: "99", filter: "blur(0.01px)"}, duration: 1, ease: "power2.out"})
+					.fromTo("#home-hello-world", 2, // fadeIn Hello World text
+						{css:{opacity: "1", filter: "blur(12px)"}}, 
+						{css:{opacity: "99", filter: "blur(0.01px)"}, duration: 1, ease: "power2.out"}, "-=2")
+					.fromTo("#home-greetings-text", 2, // fadeIn Greetings Text
+						{css:{opacity: "0", filter: "blur(12px)"}}, 
+						{css:{opacity: "99", filter: "blur(0.01px)"}, duration: 1, ease: "power2.out"}, "-=1")
+					.fromTo("#home-greetings-text", 2, // moveY Greetings Text
+						{y:200}, 
+						{y:0}, "-=2");
+
+			var codeFadeTL = gsap.timeline({repeat: -1});
+			codeFadeTL.fromTo(fadeElem[0], 7, // fadeOut current fadeElement
+						{css:{opacity: "100", filter: "blur(0.01px)"}}, 
+						{css:{opacity: "1", filter: "blur(12px)"}, delay: 5, duration: 1, ease: "power2.out"})
+					.fromTo(fadeElem[1], 7, //fadeIn next fadeElement
+						{css:{opacity: "1", filter: "blur(12px)"}}, 
+						{css:{opacity: "100", filter: "blur(0.01px)"}, duration: 1, ease: "power2.out"}, "-=7")
+					.fromTo(fadeElem[1], 7, // fadeOut current fadeElement
+						{css:{opacity: "100", filter: "blur(0.01px)"}}, 
+						{css:{opacity: "1", filter: "blur(12px)"}, duration: 1, ease: "power2.out"}, "+=7")
+					.fromTo(fadeElem[2], 7, //fadeIn next fadeElement
+						{css:{opacity: "1", filter: "blur(12px)"}}, 
+						{css:{opacity: "100", filter: "blur(0.01px)"}, duration: 1, ease: "power2.out"}, "-=7")
+					.fromTo(fadeElem[2], 7, // fadeOut current fadeElement
+						{css:{opacity: "100", filter: "blur(0.01px)"}}, 
+						{css:{opacity: "1", filter: "blur(12px)"}, duration: 1, ease: "power2.out"}, "+=7")
+					.fromTo(fadeElem[3], 7, //fadeIn next fadeElement
+						{css:{opacity: "1", filter: "blur(12px)"}}, 
+						{css:{opacity: "100", filter: "blur(0.01px)"}, duration: 1, ease: "power2.out"}, "-=7")
+					.fromTo(fadeElem[3], 7, // fadeOut current fadeElement
+						{css:{opacity: "100", filter: "blur(0.01px)"}}, 
+						{css:{opacity: "1", filter: "blur(12px)"}, duration: 1, ease: "power2.out"}, "+=7")
+					.fromTo(fadeElem[0], 7, //fadeIn next fadeElement
+						{css:{opacity: "1", filter: "blur(12px)"}}, 
+						{css:{opacity: "100", filter: "blur(0.01px)"}, duration: 1, ease: "power2.out"}, "-=7");
+
+			// null timeline to set gsap animations to 0 opacity
+			var gsapNullfier = gsap.timeline();
+			gsapNullfier.to(fadeElem[1], 0, {css:{opacity: "1", filter: "blur(12px)"}})
+						.to(fadeElem[2], 0, {css:{opacity: "1", filter: "blur(12px)"}})
+						.to(fadeElem[3], 0, {css:{opacity: "1", filter: "blur(12px)"}});
+		}
+
+		function getRandomInt(min, max) {
+			min = Math.ceil(min);
+			max = Math.floor(max);
+			return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+		}
+
+		// About section animation
+		function animAbout() {
+			var paraAnim = gsap.timeline();
+			paraAnim.fromTo("#about-para-1", 2, // fadeIn About Paragraph1
+						{css:{opacity: "0", filter: "blur(12px)"}}, 
+						{css:{opacity: "100", filter: "blur(0.01px)"}, duration: 1, ease: "power2.out"})
+					.fromTo("#about-para-1", 2, // moveX About Paragraph1
+						{x:-100}, 
+						{x:0, duration: 1, ease: "power2.out"}, "-=2")
+					.fromTo("#poly-logo-arm-1", 2,
+						{rotation: getRandomInt(45, 270), x:getRandomInt(-150, 150), y:getRandomInt(-150, 150), opacity: 0, filter: 'blur(5px)'},
+						{rotation: 0, x:143, y:0, opacity: 1, filter: 'blur(0.01px)'}, "-=2")
+					.fromTo("#poly-logo-arm-2", 2,
+						{rotation: getRandomInt(45, 270), x:getRandomInt(-150, 150), y:getRandomInt(-150, 150), opacity: 0, filter: 'blur(5px)'},
+						{rotation: 0, x:60, y:0, opacity: 1, filter: 'blur(0.01px)'}, "-=2")
+					.fromTo("#poly-logo-arm-3", 2,
+						{rotation: getRandomInt(45, 270), x:getRandomInt(-150, 150), y:getRandomInt(-150, 150), opacity: 0, filter: 'blur(5px)'},
+						{rotation: 0, x:-21, y:0, opacity: 1, filter: 'blur(0.01px)'}, "-=2")
+					.fromTo("#poly-logo-arm-4", 2,
+						{rotation: getRandomInt(45, 270), x:getRandomInt(-150, 150), y:getRandomInt(-150, 150), opacity: 0, filter: 'blur(5px)'},
+						{rotation: 0, x:-90, y:0, opacity: 1, filter: 'blur(0.01px)'}, "-=2")
+					.fromTo("#poly-logo-text", 1,
+						{opacity: 0, filter: 'blur(5px)'},
+						{opacity: 1, filter: 'blur(0.01px)'})
+					
+					
+					;
+
+			var scene = new ScrollMagic.Scene({
+								triggerElement: "#about"
+							})
+							.setTween(paraAnim)
+							.addTo(aboutController);
+		}
+
+		// skill animation get method
+		// unable to loop delay timer without this
+		function animSkillgetTween(img) {
+			var centerRect = document.getElementById("tester").getBoundingClientRect(), iconRect;
+			iconRect = img.getBoundingClientRect();
+			offsetY  = centerRect.top - iconRect.top,
+		    offsetX  = centerRect.left - iconRect.left;
+
+		    return gsap.fromTo(img, 2, 
+							{x:offsetX, y:offsetY},
+							{x: 0, y: 0, duration: 1, ease: "power2.out"});
+		}
+
+		// skill section animation
+		function animSkill() {
+			skillIcons = document.querySelectorAll("td");
+			var skillAnim = gsap.timeline();
+			for (var i = 0; i < skillIcons.length; i++) {
+				skillAnim.add(animSkillgetTween(skillIcons[i]), "-=2")
+			}
+
+			var scene = new ScrollMagic.Scene({
+								triggerElement: "#skills"
+							})
+							.setTween(skillAnim)
+							.addTo(skillsController);
+		}
+
+		// icon image hovering animation
+		function imgHover(within, elem) {
+			// blur icon, appear text
+			var text = document.querySelector('#' + elem);
+			var icon = document.querySelector('#' + elem + ' + *')
+			if (within) {
+				text.style.opacity = "100";
+				//icon.style.webkitFilter = "invert(20%) sepia(17%) saturate(6100%) hue-rotate(243deg) brightness(35%) contrast(100%) blur(3px)";	
+				icon.style.webkitFilter = "invert(15%) brightness(50%) blur(3px)"
+			}
+			else {
+				text.style.opacity = "0";
+				icon.style.webkitFilter = "none";
+			}
+		}
+
+	</script>
+
+
 </html>
-
-<script type="text/javascript">
-	var aboutController = new ScrollMagic.Controller();
-	var skillsController = new ScrollMagic.Controller();
-	// Elements to fade in and out from
-	var fadeElem = [
-		document.querySelector('.home-java'), 
-		document.querySelector('.home-html'),
-		document.querySelector('.home-cc'), 
-		document.querySelector('.home-c')
-	];
-
-	window.onload = function start() {
-    	animCodeFade();
-    	animAbout();
-    	animSkill();
-	}
-
-	function animCodeFade() {
-		// fader variables
-		var fade = 0;
-		var counter = 2;
-
-		/*
-		gsap Begining Timeline:
-		- Fade in Java Code (duration: 3)
-		- Fade in Hello World (duration: 2, startAt: -2)
-		- Fade in Greetings Text (duration: 2, startAt: -1)
-		- Move Greetings Text (duration: 2, startAt: -2)
-		*/
-		var beginTL = gsap.timeline();
-		beginTL.fromTo(fadeElem[fade], 3, // begining fadeIn of first fadeElement
-					{css:{opacity: "1", filter: "blur(12px)"}}, 
-					{css:{opacity: "99", filter: "blur(0.01px)"}, duration: 1, ease: "power2.out"})
-				.fromTo("#home-hello-world", 2, // fadeIn Hello World text
-					{css:{opacity: "1", filter: "blur(12px)"}}, 
-					{css:{opacity: "99", filter: "blur(0.01px)"}, duration: 1, ease: "power2.out"}, "-=2")
-				.fromTo(".home-greetings-text", 2, // fadeIn Greetings Text
-					{css:{opacity: "0", filter: "blur(12px)"}}, 
-					{css:{opacity: "99", filter: "blur(0.01px)"}, duration: 1, ease: "power2.out"}, "-=1")
-				.fromTo(".home-greetings-text", 2, // moveY Greetings Text
-					{y:200}, 
-					{y:0}, "-=2");
-
-		var codeFadeTL = gsap.timeline({repeat: -1});
-		codeFadeTL.fromTo(fadeElem[0], 7, // fadeOut current fadeElement
-					{css:{opacity: "100", filter: "blur(0.01px)"}}, 
-					{css:{opacity: "1", filter: "blur(12px)"}, delay: 5, duration: 1, ease: "power2.out"})
-				.fromTo(fadeElem[1], 7, //fadeIn next fadeElement
-					{css:{opacity: "1", filter: "blur(12px)"}}, 
-					{css:{opacity: "100", filter: "blur(0.01px)"}, duration: 1, ease: "power2.out"}, "-=7")
-				.fromTo(fadeElem[1], 7, // fadeOut current fadeElement
-					{css:{opacity: "100", filter: "blur(0.01px)"}}, 
-					{css:{opacity: "1", filter: "blur(12px)"}, duration: 1, ease: "power2.out"}, "+=7")
-				.fromTo(fadeElem[2], 7, //fadeIn next fadeElement
-					{css:{opacity: "1", filter: "blur(12px)"}}, 
-					{css:{opacity: "100", filter: "blur(0.01px)"}, duration: 1, ease: "power2.out"}, "-=7")
-				.fromTo(fadeElem[2], 7, // fadeOut current fadeElement
-					{css:{opacity: "100", filter: "blur(0.01px)"}}, 
-					{css:{opacity: "1", filter: "blur(12px)"}, duration: 1, ease: "power2.out"}, "+=7")
-				.fromTo(fadeElem[3], 7, //fadeIn next fadeElement
-					{css:{opacity: "1", filter: "blur(12px)"}}, 
-					{css:{opacity: "100", filter: "blur(0.01px)"}, duration: 1, ease: "power2.out"}, "-=7")
-				.fromTo(fadeElem[3], 7, // fadeOut current fadeElement
-					{css:{opacity: "100", filter: "blur(0.01px)"}}, 
-					{css:{opacity: "1", filter: "blur(12px)"}, duration: 1, ease: "power2.out"}, "+=7")
-				.fromTo(fadeElem[0], 7, //fadeIn next fadeElement
-					{css:{opacity: "1", filter: "blur(12px)"}}, 
-					{css:{opacity: "100", filter: "blur(0.01px)"}, duration: 1, ease: "power2.out"}, "-=7");
-
-		var gsapNullfier = gsap.timeline();
-		gsapNullfier.to(fadeElem[1], 0, {css:{opacity: "1", filter: "blur(12px)"}})
-					.to(fadeElem[2], 0, {css:{opacity: "1", filter: "blur(12px)"}})
-					.to(fadeElem[3], 0, {css:{opacity: "1", filter: "blur(12px)"}});
-	}
-
-	function animAbout() {
-		var paraAnim = gsap.timeline();
-		paraAnim.fromTo("#about-para-1", 2, // fadeIn About Paragraph1
-					{css:{opacity: "0", filter: "blur(12px)"}}, 
-					{css:{opacity: "100", filter: "blur(0.01px)"}, duration: 1, ease: "power2.out"})
-				.fromTo("#about-para-1", 2, // moveX About Paragraph1
-					{x:-100}, 
-					{x:0, duration: 1, ease: "power2.out"}, "-=2")
-				.fromTo("#poly-image-1", 2, // rotate polyImage1
-					{rotation: 45},
-					{rotation: 0})
-				.fromTo("#poly-image-1", 2, // fadeIn polyImage1
-					{css:{opacity: "0", filter: "blur(12px)"}}, 
-					{css:{opacity: "100", filter: "blur(0.01px)"}, duration: 1, ease: "power2.out"}, "-=2")
-				.fromTo("#poly-image-2", 2, // rotate polyImage2
-					{rotation: 45},
-					{rotation: 0}, "-=2")
-				.fromTo("#poly-image-2", 2, // fadeIn polyImage2
-					{css:{opacity: "0", filter: "blur(12px)"}}, 
-					{css:{opacity: "100", filter: "blur(0.01px)"}, duration: 1, ease: "power2.out"}, "-=2")
-				.fromTo("#poly-image-3", 2, // rotate polyImage3
-					{rotation: 45},
-					{rotation: 0}, "-=2")
-				.fromTo("#poly-image-3", 2, // fadeIn polyImage3
-					{css:{opacity: "0", filter: "blur(12px)"}}, 
-					{css:{opacity: "100", filter: "blur(0.01px)"}, duration: 1, ease: "power2.out"}, "-=2")
-				.fromTo("#poly-image-4", 2, // rotate polyImage4
-					{rotation: 45},
-					{rotation: 0}, "-=2")
-				.fromTo("#poly-image-4", 2, // fadeIn polyImage4
-					{css:{opacity: "0", filter: "blur(12px)"}}, 
-					{css:{opacity: "100", filter: "blur(0.01px)"}, duration: 1, ease: "power2.out"}, "-=2")
-				.fromTo("#poly-image-text", 1.5, //fadeIn polyText
-					{css:{opacity: "0", filter: "blur(5px)"}}, 
-					{css:{opacity: "100", filter: "blur(0.01px)"}, duration: 1, ease: "power2.out"})
-				;
-
-		var scene = new ScrollMagic.Scene({
-							triggerElement: "#about"
-						})
-						.setTween(paraAnim)
-						.addIndicators({name: "1 (duration: 0)"})
-						.addTo(aboutController);
-	}
-
-
-	function animSkillgetTween(img) {
-		var centerRect = document.getElementById("tester").getBoundingClientRect(), iconRect;
-		iconRect = img.getBoundingClientRect();
-		offsetY  = centerRect.top - iconRect.top,
-	    offsetX  = centerRect.left - iconRect.left;
-
-	    return gsap.fromTo(img, 2, 
-						{x:offsetX, y:offsetY},
-						{x: 0, y: 0, duration: 1, ease: "power2.out"});
-	}
-
-	function animSkill() {
-		skillIcons = document.querySelectorAll("td");
-		var skillAnim = gsap.timeline();
-		for (var i = 0; i < skillIcons.length; i++) {
-			skillAnim.add(animSkillgetTween(skillIcons[i]), "-=2")
-		}
-
-		var scene = new ScrollMagic.Scene({
-							triggerElement: "#skills"
-						})
-						.setTween(skillAnim)
-						.addTo(skillsController);
-	}
-
-	function imgHover(within, elem) {
-		// blur icon, appear text
-		var text = document.querySelector('#' + elem);
-		var icon = document.querySelector('#' + elem + ' + *')
-		if (within) {
-			text.style.opacity = "100";
-			//icon.style.webkitFilter = "invert(20%) sepia(17%) saturate(6100%) hue-rotate(243deg) brightness(35%) contrast(100%) blur(3px)";	
-			icon.style.webkitFilter = "invert(15%) brightness(50%) blur(3px)"
-		}
-		else {
-			text.style.opacity = "0";
-			icon.style.webkitFilter = "none";
-		}
-	}
-
-</script>
 
 

@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48" version="1.1"><g id="surface1" fill-rule="evenodd"><path d="M22.902 3.285a2.262 2.262 0 0 1 2.196 0c3.351 1.883 13.449 7.55 16.804 9.434A2.125 2.125 0 0 1 43 14.566v18.868c0 .761-.418 1.464-1.098 1.847l-16.804 9.434a2.262 2.262 0 0 1-2.196 0L6.098 35.28A2.125 2.125 0 0 1 5 33.434V14.566c0-.761.418-1.464 1.098-1.847 3.351-1.883 13.453-7.551 16.804-9.434z" fill="#283593"/><path d="M5.305 34.402C5.039 34.047 5 33.711 5 33.254V14.496a2.11 2.11 0 0 1 1.094-1.836c3.343-1.87 13.406-7.508 16.75-9.379.676-.379 1.593-.37 2.27.008 3.343 1.871 13.37 7.457 16.714 9.328.27.153.477.336.66.578z" fill="#5C6BC0"/><path d="M24 10c7.727 0 14 6.273 14 14s-6.273 14-14 14-14-6.273-14-14 6.273-14 14-14zm0 7c3.863 0 7 3.137 7 7s-3.137 7-7 7-7-3.137-7-7 3.137-7 7-7z" fill="#FFF"/><path d="M42.484 13.203c.516.485.508 1.211.508 1.785 0 3.797-.031 14.59.008 18.383.004.399-.129.816-.324 1.129L23.594 24z" fill="#3949AB"/></g><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description about="https://iconscout.com/legal#licenses" dc:title="c,programming" dc:description="c,programming" dc:publisher="Iconscout" dc:date="2017-12-15" dc:format="image/svg+xml" dc:language="en"><dc:creator><rdf:Bag><rdf:li>Icons8</rdf:li></rdf:Bag></dc:creator></rdf:Description></rdf:RDF></metadata></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 150 150" style="enable-background:new 0 0 150 150;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#283593;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#5C6BC0;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#3949AB;}
+</style>
+<g id="surface1">
+	<path class="st0" d="M71.1,1c2.4-1.4,5.4-1.4,7.8,0c12,6.7,48,27,60,33.7c2.4,1.3,3.9,3.9,3.9,6.6v67.4c0,2.7-1.5,5.2-3.9,6.6
+		l-60,33.7c-2.4,1.4-5.4,1.4-7.8,0l-60-33.7c-2.4-1.3-3.9-3.8-3.9-6.6V41.3c0-2.7,1.5-5.2,3.9-6.6C23,28,59.1,7.7,71.1,1z"/>
+	<path class="st1" d="M8.2,112.2c-1-1.3-1.1-2.5-1.1-4.1v-67c0-2.7,1.5-5.2,3.9-6.6C23,27.8,58.9,7.7,70.9,1c2.4-1.4,5.7-1.3,8.1,0
+		c11.9,6.7,47.8,26.6,59.7,33.3c1,0.5,1.7,1.2,2.4,2.1L8.2,112.2z"/>
+	<path class="st2" d="M75,25c27.6,0,50,22.4,50,50s-22.4,50-50,50s-50-22.4-50-50S47.4,25,75,25z M75,50c13.8,0,25,11.2,25,25
+		s-11.2,25-25,25S50,88.8,50,75S61.2,50,75,50z"/>
+	<path class="st3" d="M141,36.4c1.8,1.7,1.8,4.3,1.8,6.4c0,13.6-0.1,52.1,0,65.7c0,1.4-0.5,2.9-1.2,4L73.5,75L141,36.4z"/>
+</g>
+</svg>
