@@ -29,7 +29,7 @@ html {
 	font-family: 'clacon', monospace;
 	font-size: 60px;
 	text-shadow: 4px 4px black;
-	left: 50%;
+	left: 54%;
 	padding-top: 20px;
 	position: absolute;
 }
@@ -40,7 +40,6 @@ html {
 	left: 50%;
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-
 }	
 .contentSeperator > span:after {
 	position: absolute;
@@ -57,10 +56,10 @@ html {
     height: 1px;
 }
 
-#about {top: 100vh; padding-top: 5%;}
-#skills {top: 200%; padding-top: 5%;}
-#projects {top: 300%; padding-top: 5%;}
-#contact {top: 400%; padding-top: 5%;}
+#about {top: 100%; padding-top: 10%;}
+#skills {top: 200%; padding-top: 10%;}
+#projects {top: 300%; padding-top: 10%;}
+#contact {top: 400%; padding-top: 10%;}
 #fillerContent {
 	top:500%;
 	position: absolute;
@@ -71,25 +70,26 @@ html {
 */
 /* div container*/
 #side-nav {
+	left: 0;
 	position: fixed;
 	height: 100%;
-	z-index: 1;
-	left: 0;
 }
 /* side nav ul */
 #side-nav-list {
 	position: relative;
-	top: 30%;
-	padding: 0;
+	top: 30vh;
+	padding-left: 0;
+	padding-top: 10vh;
+	
 }
 /* a elements in side nav (ul > li > a > (div + img)*/
 .side-nav-a {
 	display: block;
 	position: relative;
+	z-index: 1;
 	padding-left: 7px;
 	padding-top: 5px;
 }
-
 
 /* text elements in side nav which appear/disappear when hovered */
 .side-nav-text {
@@ -115,7 +115,7 @@ html {
 /* fading background code */
 .home-background-code {
 	font-family: 'clacon', monospace;
-	font-size: 45px;
+	font-size: 35px;
 	color: #494949;
 	width: 100%;
 	position: absolute;
@@ -145,9 +145,9 @@ html {
 /* Hello World div container*/
 #home-hello-world {
 	position: absolute;
-	left: 225px;
-	top: 140px;
-	font-size: 50px;
+	left: 195px;
+	top: 128px;
+	font-size: 35px;
 	color: #B4B4B4;
 	opacity: 1;
 	filter: blur(12px);
@@ -161,11 +161,11 @@ html {
 #home-greetings-text {
 	color: #B4B4B4;
 	font-family: 'clacon', monospace;
-	font-size: 60px;
+	font-size: 45px;
 	text-shadow: 4px 4px black;
 	position: absolute;
 	left: 195px;
-	top: 70%;
+	top: 75%;
 	opacity: 0;
 }
 /* adding <p> decorational elements before and after*/
@@ -176,7 +176,7 @@ html {
 #home-profile-image {
 	position: absolute;
 	right: 15%;
-	top: 10%;
+	top: 35%;
 	transform: rotate(10deg);
 	width: 30%;
 }
@@ -195,36 +195,35 @@ html {
 #about-para-1 {
 	color: #B4B4B4;
 	font-family: 'clacon', monospace;
-	font-size: 35px;
+	font-size: 30px;
 	text-shadow: 4px 4px black;
 	position: absolute;
 	top: 110%;
-	left: 18%;
-	width: 500px;
+	left: 20%;
+	width: 550px;
 }
 
 #about-poly-logo {
 	position: absolute;
-	top: 135%;
-	right: 45%;
+	top: 188%;
+	left: 20%;
 	border-width: 5px;
 	border-color: white;
 }
 
 .poly-logo-parts {
-	width: 82px;
+	width: 15vw;
 	position: absolute;
 	bottom:0;
-	left: 138px;
+	left: 23vw;
 }
 #poly-logo-text {
-	width: 409.5px;
+	width: 70vw;
 	position: absolute;
 }
-#poly-logo-arm-2 {padding-left: 19px;}
-#poly-logo-arm-3 {padding-left: 38px;}
-#poly-logo-arm-4 {padding-left: 68px;}
-
+#poly-logo-arm-2 {padding-left: 24px;}
+#poly-logo-arm-3 {padding-left: 50px;}
+#poly-logo-arm-4 {padding-left: 90px;}
 
 /*
 <-- Skills Section -->
@@ -232,23 +231,24 @@ html {
 /* languages image table*/
 #lang-table {
 	position: absolute;
-	top:210%;
-	left: 18%;
+	top:215%;
+	left: 12%;
 }
 /* utilities image table*/
 #util-table {
 	position: absolute;
-	top:210%;
-	right: 18%;
+	top:215%;
+	right: 8%;
 }
 /* table headings */
 th {
 	color: #B4B4B4;
 	font-family: 'clacon', monospace;
-	font-size: 40px;
+	font-size: 35px;
 	text-shadow: 4px 4px black;
 	text-align: right;
-	padding-right: 25%;
+	padding-right: 15%;
+	padding-bottom: 3%;
 }
 /* location where images spread from */
 #skills-table-spew {
@@ -262,16 +262,15 @@ th {
 	color: white;
 	text-shadow: 4px 4px black;
 	font-family: 'clacon', monospace;
-	font-size: 40px;
+	font-size: 30px;
 	position: absolute;
 	z-index: 1;
 	opacity: 0;
 }
 /* images within table */
 .skills-table-text + img {
-	width: 8vw; 
-	min-width: 150px;
-	max-width: 150px;
+	min-width: 100px;
+	max-width: 100px;
 	height: auto;
 	padding-left: 25px;
 }
@@ -293,9 +292,9 @@ th {
 /* skills paragraph*/
 #skills-paragraph p {
 	position: absolute;
-	top:278%;
-	left: 26%;
-	width: 50%;
+	top:265%;
+	left: 20%;
+	width: 70%;
 	color: white;
 	text-shadow: 4px 4px black;
 	font-family: 'clacon', monospace;
@@ -308,10 +307,9 @@ th {
 /* Container for up/down arrows */
 #project-rotation {
 	position: absolute;
-	top:320vh;
+	top:310%;
 	left: 12%;
-	width: 15vh;
-	z-index: 1;
+	width: 10%;
 }
 
 #project-down-arrow {padding-top: 400%;}
@@ -325,19 +323,20 @@ th {
 	left: 50%;
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
+	
 }
 
 .project-card-container > img {
-	width: 130%;
+	width: 155%;
 }
 
 /* project title card image container */
 .project-title-card {
 	position: absolute;
-	top: 333vh;
-	left: -10vh;
-	width: 100vh;
-	height: 50vh;
+	top: 314%;
+	left: 0%;
+	width: 90vw;
+	height: 30vh;
 	overflow: hidden;
 	opacity: 0;
 }
@@ -349,10 +348,10 @@ th {
 	font-size: 30px;
 
 	position: absolute;
-	top: 333vh;
-	right:0%;
-	width: 60vw;
-	height: 50vh;
+	top: 357%;
+	right:-25%;
+	width: 70%;
+	height: 30vh;
 	
 }
 
@@ -360,7 +359,6 @@ th {
 	margin: 0;
 	position: absolute;
 	top: 50%;
-	left: 50%;
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	
@@ -377,7 +375,7 @@ th {
 	text-align: center;
 	position: absolute;
 	top: 433vh;
-	left:38.5%;
+	left:24%;
 }
 
 #contact-email {

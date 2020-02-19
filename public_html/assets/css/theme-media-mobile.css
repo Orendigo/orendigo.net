@@ -27,9 +27,9 @@ html {
 	text-align: center;
 	color: #B4B4B4;
 	font-family: 'clacon', monospace;
-	font-size: 60px;
+	font-size: 40px;
 	text-shadow: 4px 4px black;
-	left: 50%;
+	left: 56%;
 	padding-top: 20px;
 	position: absolute;
 }
@@ -40,7 +40,6 @@ html {
 	left: 50%;
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-
 }	
 .contentSeperator > span:after {
 	position: absolute;
@@ -57,10 +56,10 @@ html {
     height: 1px;
 }
 
-#about {top: 100vh; padding-top: 5%;}
-#skills {top: 200%; padding-top: 5%;}
-#projects {top: 300%; padding-top: 5%;}
-#contact {top: 400%; padding-top: 5%;}
+#about {top: 100%; padding-top: 10%;}
+#skills {top: 200%; padding-top: 10%;}
+#projects {top: 300%; padding-top: 10%;}
+#contact {top: 400%; padding-top: 10%;}
 #fillerContent {
 	top:500%;
 	position: absolute;
@@ -69,45 +68,22 @@ html {
 /*
 <-- Side Navigation -->
 */
-/* div container*/
-#side-nav {
-	position: fixed;
-	height: 100%;
-	z-index: 1;
-	left: 0;
-}
-/* side nav ul */
-#side-nav-list {
-	position: relative;
-	top: 30%;
-	padding: 0;
-}
-/* a elements in side nav (ul > li > a > (div + img)*/
-.side-nav-a {
-	display: block;
-	position: relative;
-	padding-left: 7px;
-	padding-top: 5px;
-}
-
-
-/* text elements in side nav which appear/disappear when hovered */
-.side-nav-text {
-	font-family: 'clacon', monospace;
-	font-size: 23px;
-	color: white;
-	text-align: center;
+/* No side nav in mobile */
+#side-nav{
 	position: absolute;
-	z-index: 1;
-	opacity: 0;
+	opacity: 0
 }
-/* absolute positioning values for various side nav texts */
-#side-nav-home-text {left: 14px; top: 15px;}
-#side-nav-about-text {left: 9px; top: 17px;}
-#side-nav-skills-text {left: 5px; top: 15px;}
-#side-nav-projects-text {left: -5px; top: 15px;}
-#side-nav-contact-text {left: 0px; top: 10px;}
-
+#side-nav:after
+{
+    content: '';
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    z-index:1;
+    background: transparent;
+}
 
 /*
 <-- Home Section -->
@@ -115,10 +91,12 @@ html {
 /* fading background code */
 .home-background-code {
 	font-family: 'clacon', monospace;
-	font-size: 45px;
+	font-size: 20px;
 	color: #494949;
 	width: 100%;
 	position: absolute;
+	top: 5vh;
+	left: 5vw;
 
 	-moz-user-select: none;
 	-webkit-user-select: none;
@@ -130,8 +108,7 @@ html {
 /* code element div containers */
 .home-background-code > div {
 	position: absolute; 
-	left: 125px;
-	top: 80px;
+	
 }
 /* actual p elements of each code block*/
 .home-background-code > div > p {
@@ -145,9 +122,9 @@ html {
 /* Hello World div container*/
 #home-hello-world {
 	position: absolute;
-	left: 225px;
-	top: 140px;
-	font-size: 50px;
+	top: 4.5vh;
+	left: 11vw;
+	font-size: 20px;
 	color: #B4B4B4;
 	opacity: 1;
 	filter: blur(12px);
@@ -161,11 +138,11 @@ html {
 #home-greetings-text {
 	color: #B4B4B4;
 	font-family: 'clacon', monospace;
-	font-size: 60px;
+	font-size: 30px;
 	text-shadow: 4px 4px black;
 	position: absolute;
-	left: 195px;
-	top: 70%;
+	left: 5vw;
+	top: 80vh;
 	opacity: 0;
 }
 /* adding <p> decorational elements before and after*/
@@ -176,9 +153,9 @@ html {
 #home-profile-image {
 	position: absolute;
 	right: 15%;
-	top: 10%;
+	top: 33%;
 	transform: rotate(10deg);
-	width: 30%;
+	width: 50%;
 }
 #home-profile-image:hover {filter: invert(20%) sepia(17%) saturate(6100%) hue-rotate(243deg) brightness(35%) contrast(100%) blur(0px);}
 
@@ -188,67 +165,67 @@ html {
 /* about section container */
 #about-div {
 	position: absolute;
-	left: 195px;
+	left: 20vw;
 	top: 100%;
 }
 /* about paragraph container*/
 #about-para-1 {
 	color: #B4B4B4;
 	font-family: 'clacon', monospace;
-	font-size: 35px;
+	font-size: 20px;
 	text-shadow: 4px 4px black;
 	position: absolute;
 	top: 110%;
-	left: 18%;
-	width: 500px;
+	left: 10vw;
+	width: 300px;
 }
 
 #about-poly-logo {
 	position: absolute;
-	top: 135%;
-	right: 45%;
+	top: 188%;
+	left: 15%;
 	border-width: 5px;
 	border-color: white;
 }
 
 .poly-logo-parts {
-	width: 82px;
+	width: 15vw;
 	position: absolute;
 	bottom:0;
-	left: 138px;
+	left: 23vw;
 }
 #poly-logo-text {
-	width: 409.5px;
+	width: 70vw;
 	position: absolute;
 }
-#poly-logo-arm-2 {padding-left: 19px;}
-#poly-logo-arm-3 {padding-left: 38px;}
-#poly-logo-arm-4 {padding-left: 68px;}
+#poly-logo-arm-2 {padding-left: 11px;}
+#poly-logo-arm-3 {padding-left: 23px;}
+#poly-logo-arm-4 {padding-left: 42px;}
 
-
-/*
+/* 
 <-- Skills Section -->
 */
 /* languages image table*/
 #lang-table {
 	position: absolute;
-	top:210%;
-	left: 18%;
+	top:215%;
+	left: 8%;
 }
 /* utilities image table*/
 #util-table {
 	position: absolute;
-	top:210%;
-	right: 18%;
+	top:215%;
+	right: 8%;
 }
 /* table headings */
 th {
 	color: #B4B4B4;
 	font-family: 'clacon', monospace;
-	font-size: 40px;
+	font-size: 26px;
 	text-shadow: 4px 4px black;
 	text-align: right;
-	padding-right: 25%;
+	padding-right: 15%;
+	padding-bottom: 2%;
 }
 /* location where images spread from */
 #skills-table-spew {
@@ -262,44 +239,42 @@ th {
 	color: white;
 	text-shadow: 4px 4px black;
 	font-family: 'clacon', monospace;
-	font-size: 40px;
+	font-size: 14px;
 	position: absolute;
 	z-index: 1;
 	opacity: 0;
 }
 /* images within table */
 .skills-table-text + img {
-	width: 8vw; 
-	min-width: 150px;
-	max-width: 150px;
+	min-width: 60px;
+	max-width: 60px;
 	height: auto;
-	padding-left: 25px;
 }
 /* absolute positions of text within table*/
-#python-text {top:35%; left: 33%;}
-#html-text {top:35%; left: 40%;}
-#java-text {top:47%; left: 40%;}
-#javascript-text {top:45%; left: 13%;}
-#cc-text {top:39%; left: 46%;}
-#c-text {top:39%; left: 52%;}
+#python-text {top:35%; left: 25%;}
+#html-text {top:35%; left: 33%;}
+#java-text {top:47%; left: 33%;}
+#javascript-text {top:45%; left: 6%;}
+#cc-text {top:39%; left: 39%;}
+#c-text {top:39%; left: 45%;}
 
-#git-text {top:35%; left: 43%;}
-#visualstudio-text {top:28%; left: 15%;}
-#bash-text {top:40%; left: 39%;}
-#office-text {top:40%; left: 30%;}
-#arduino-text {top:39%; left: 26%;}
-#netbeans-text {top:39%; left: 23%;}
+#git-text {top:35%; left: 36%;}
+#visualstudio-text {top:28%; left: 8%;}
+#bash-text {top:40%; left: 32%;}
+#office-text {top:40%; left: 23%;}
+#arduino-text {top:39%; left: 19%;}
+#netbeans-text {top:39%; left: 15%;}
 
 /* skills paragraph*/
 #skills-paragraph p {
 	position: absolute;
-	top:278%;
-	left: 26%;
-	width: 50%;
+	top:265%;
+	left: 13%;
+	width: 80%;
 	color: white;
 	text-shadow: 4px 4px black;
 	font-family: 'clacon', monospace;
-	font-size: 30px;
+	font-size: 20px;
 }
 
 /*
@@ -308,9 +283,9 @@ th {
 /* Container for up/down arrows */
 #project-rotation {
 	position: absolute;
-	top:320vh;
+	top:310%;
 	left: 12%;
-	width: 15vh;
+	width: 10%;
 	z-index: 1;
 }
 
@@ -325,19 +300,20 @@ th {
 	left: 50%;
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
+	
 }
 
 .project-card-container > img {
-	width: 130%;
+	width: 155%;
 }
 
 /* project title card image container */
 .project-title-card {
 	position: absolute;
-	top: 333vh;
-	left: -10vh;
-	width: 100vh;
-	height: 50vh;
+	top: 309%;
+	left: 10%;
+	width: 70vw;
+	height: 30vh;
 	overflow: hidden;
 	opacity: 0;
 }
@@ -346,13 +322,13 @@ th {
 	color: white;
 	text-shadow: 4px 4px black;
 	font-family: 'clacon', monospace;
-	font-size: 30px;
+	font-size: 18px;
 
 	position: absolute;
-	top: 333vh;
-	right:0%;
-	width: 60vw;
-	height: 50vh;
+	top: 355%;
+	right:-20%;
+	width: 70%;
+	height: 30vh;
 	
 }
 
@@ -360,7 +336,6 @@ th {
 	margin: 0;
 	position: absolute;
 	top: 50%;
-	left: 50%;
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	
@@ -373,13 +348,13 @@ th {
 	top: 333vh;
 	text-shadow: 4px 4px black;
 	font-family: 'clacon', monospace;
-	font-size: 30px;
+	font-size: 25px;
 	text-align: center;
 	position: absolute;
 	top: 433vh;
-	left:38.5%;
+	left:15%;
 }
 
 #contact-email {
-	font-size: 40px;
-}
+	font-size: 30px;
+}	
