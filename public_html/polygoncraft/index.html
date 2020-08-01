@@ -1,0 +1,47 @@
+<!--
+   ____                          __ _             
+  / __ \ _____ ___   ____   ____/ /(_)____ _ ____ 
+ / / / // ___// _ \ / __ \ / __  // // __ `// __ \
+/ /_/ // /   /  __// / / // /_/ // // /_/ // /_/ /
+\____//_/    \___//_/ /_/ \__,_//_/ \__, / \____/ 
+                                   /____/         
+                                       ohhiya
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>PolygonCraft - Revival</title>
+		<link rel="shortcut icon" href="../assets/img/polygoncraft-icon.ico">
+		<link rel="stylesheet" href="../assets/css/polygoncraft.css" type="text/css">
+		<!-- gsap -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+		<!-- tweenMax -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+	</head>
+
+	<body id="body">
+		<div id="header-container" style="filter: blur(0.01px); opacity: 1; transform: translate(0px, 0px);">
+			<div id="header-top"></div>
+			<div id="header"></div>
+			<div id="header-bottom"></div>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		window.onload = function start() {
+	    	animLogoFade();
+		}
+
+		function animLogoFade() {
+			var beginTL = gsap.timeline();
+			beginTL.fromTo("#header-container", 2, // fadeIn Greetings Text
+						{opacity: 0, filter: 'blur(12px)'}, 
+						{opacity: 1, filter: 'blur(0.01px)', duration: 10, ease: "power2.out"},)
+					.fromTo("#header-container", 2, // moveY Greetings Text
+						{y:100}, 
+						{y:0}, "-=2");
+		}
+	</script>
+</html>
