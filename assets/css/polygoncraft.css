@@ -8,6 +8,11 @@
                                        ohhiya
 */
 
+.text {
+	font: Lucida Grande;
+	font-size: 11pt;
+}
+
 body {
 	color:#cccccc;
 	background-image:url("../img/polygoncraft/bg_spawn.jpg");
@@ -29,7 +34,7 @@ body {
 }
 
 #header-container {
-	padding-top: 50px;
+	padding-top: 30px;
 }
 
 #header {
@@ -86,4 +91,75 @@ body {
 	z-index: -1;
 	width: 60%;
 	min-width: 800px;
+}
+
+#content-container {
+	padding-top: 5%;
+}
+
+#content {
+	border: 2px solid #000000;
+	border-radius: 5px;
+	background: rgba(0, 0, 0, 0.7);
+	height: 300px; 
+	margin: auto;
+	position: relative;
+	width: 60%;
+	min-width: 800px;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
+#content:before {
+	content: " ";
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	border: 1px solid #555555;
+	border-radius: 5px;
+}
+
+#orendigo-head {
+	background-image: url('../img/polygoncraft/orendigo.png');
+	background-repeat: no-repeat; 
+	background-position: center center;
+	border: 1px solid #555555;
+	height: 48px; 
+	width: 48px;
+	position: relative;
+	z-index: 1;
+}
+
+#orendigo-head:before {
+	content: " ";
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	border: 1px solid #000000;
+}
+
+#orendigo-head > p {
+	width: 500px;
+	height: 20px;
+	font-family: Calibri;
+	font-size: 20pt;
+	color:#FC9049;
+	text-decoration:none;
+	margin-left: 60px;
+	line-height: 20px;
+	margin-top: 10%;
+	margin-bottom: 0;
+}
+
+#text-content {
+	padding-top: 5px;
+	padding-left: 5px;
+	font-family: Calibri;
+	font-size: 14pt;
 }

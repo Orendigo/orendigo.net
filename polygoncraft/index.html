@@ -30,6 +30,21 @@
 		<div id="header-text-container" style="filter: blur(0.01px); opacity: 0;">
 			<div id="header-text"></div>
 		</div>
+
+		<div id="content-container" style="filter: blur(0.01px); opacity: 0;">
+			<div id="content">
+				<div id="orendigo-head">
+					<p> Come join us for one more Mega Build Off! <br> 
+						<span class="text" style="color: red; margin-top: 5px;"> Orendigo 
+							<span class="text" style="color: #C6C6C6;">posted Sat at 12:00</span> 
+						</span> 
+					</p>
+				</div>
+				<div id="text-content">
+					Bet you thought nothing would happen with Poly ever again, didn't ya?
+				</div>
+			</div>
+		</div>
 	</body>
 
 	<script type="text/javascript">
@@ -39,18 +54,21 @@
 
 		function animLogoFade() {
 			var beginTL = gsap.timeline();
-			beginTL.fromTo("#header-container", 2, // fadeIn Greetings Text
+			beginTL.fromTo("#header-container", 2, // fadeIn Header
 						{opacity: 0, filter: 'blur(12px)'}, 
 						{opacity: 1, filter: 'blur(0.01px)', duration: 10, ease: "power2.out"},)
-					.fromTo("#header-container", 2, // moveY Greetings Text
+					.fromTo("#header-container", 2, // moveY Header
 						{y:100}, 
 						{y:0}, "-=2")
-					.fromTo("#header-text-container", 2, // fadeIn Greetings Text
+					.fromTo("#header-text-container", 2, // fadeIn Header Text
 						{opacity: 0, filter: 'blur(12px)'}, 
 						{opacity: 1, filter: 'blur(0.01px)', duration: 10, ease: "power2.out"},)
-					.fromTo("#header-text-container", 2, // moveY Greetings Text
+					.fromTo("#header-text-container", 2, // moveY Header Text
 						{y:-100}, 
 						{y:0}, "-=2")
+					.fromTo("#content-container", 2, // fadeIn Content
+						{opacity: 0, filter: 'blur(12px)'}, 
+						{opacity: 1, filter: 'blur(0.01px)', duration: 10, ease: "power2.out"}, "-=2")
 					;
 		}
 	</script>
