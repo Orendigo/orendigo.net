@@ -11,10 +11,12 @@
 body {
 	color:#cccccc;
 	background-image:url("../img/polygoncraft/bg_spawn.jpg");
+	height: auto;
 	background-attachment:fixed;
 	background-color:#000000;
 	background-repeat:no-repeat;
 	background-position:top; 
+	background-size: cover;
 }
 
 #page-wrap { 
