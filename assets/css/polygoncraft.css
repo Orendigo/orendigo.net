@@ -13,7 +13,7 @@
 	font-size: 11pt;
 }
 
-body {
+html {
 	color:#cccccc;
 	background-image:url("../img/polygoncraft/bg_spawn.jpg");
 	height: auto;
@@ -22,15 +22,6 @@ body {
 	background-repeat:no-repeat;
 	background-position:top; 
 	background-size: cover;
-}
-
-#page-wrap { 
-	font-size:12px;
-	margin-left:-15px;
-	background-color:transparent;
-	font-family:Tahoma;
-	color:#cccccc;
-	margin-right:-15px;
 }
 
 #header-container {
@@ -162,4 +153,48 @@ body {
 	padding-left: 5px;
 	font-family: Calibri;
 	font-size: 14pt;
+}
+
+#information-container {
+	margin: auto;
+	position: relative;
+}
+
+#discord-container {
+	display: flex;
+	max-width: 300px;
+	box-shadow: 0 5px 1rem 0.1rem rgba(0,0,0,.4);
+	justify-content: space-between;
+	position: absolute;
+	margin-left: 65%;
+	margin-top: 45px;
+	font-family: Calibri;
+	font-size: 14pt;
+}
+
+#discord-container a {
+	z-index: 2;
+	font-family: Calibri;
+	font-size: 14pt;
+	color: #FC9049;
+}
+
+#ip {
+	display: flex;
+	max-width: 300px;
+	box-shadow: 0 5px 1rem 0.1rem rgba(0,0,0,.4);
+	justify-content: space-between;
+	position: absolute;
+	margin-left: 10%;
+	margin-top: 45px;
+	font-family: Calibri;
+	font-size: 14pt;
+}
+
+#selectable {
+	color: #FC9049;
+}
+#copy {
+	padding-left: 5px;
+	z-index: 2;
 }

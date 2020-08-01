@@ -41,18 +41,49 @@
 					</p>
 				</div>
 				<div id="text-content">
-					Bet you thought nothing would happen with Poly ever again, didn't ya?
+					<span style="font-weight: bold">Bet you thought nothing would happen with Poly ever again, didn't ya?</span><br>
+					On <span style="color: #FC9049; font-weight: bold">August 7th, 2020 1:00AM UTC</span>, a brand new <span style="font-weight: bold">Mega Build Off</span> will commence, funtioning as both a contest, and as a reunion! &nbsp;There may even be prizes for the winning teams, and who knows, maybe this MBO won't be the last?...<br><br>
+					Below are links for the PolygonCraft IP and the original PolygonCraft Discord. &nbsp;I hope to see you all there, once again.
+				</div>
+
+				<div id="information-container">
+					<div id="ip">IP:&nbsp;
+						<div id="selectable">play.polygoncraft.net&nbsp;</div>
+						<button id="copy" onclick="copyToClipboard('play.polygoncraft.net')">
+				  			<svg viewBox="0 0 448 512" width="16" title="copy">
+				  			<path d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z" />
+							</svg>
+						</button>
+					</div>
+
+					<div id="discord-container">
+						<a href="http://discord.polygoncraft.net">discord.polygoncraft.net</a>
+					</div>
 				</div>
 			</div>
+
+			
 		</div>
+		
 	</body>
 
 	<script type="text/javascript">
+		const copyToClipboard = str => {
+			const el = document.createElement('textarea');
+	  		el.value = str;
+	  		document.body.appendChild(el);
+	  		el.select();
+	  		document.execCommand('copy');
+	  		document.body.removeChild(el);
+	  		const copy = document.getElementById('copy');
+	 		copy.innerHTML = "Copied!";
+		};
+
 		window.onload = function start() {
-	    	animLogoFade();
+	    	anim();
 		}
 
-		function animLogoFade() {
+		function anim() {
 			var beginTL = gsap.timeline();
 			beginTL.fromTo("#header-container", 2, // fadeIn Header
 						{opacity: 0, filter: 'blur(12px)'}, 
@@ -68,8 +99,7 @@
 						{y:0}, "-=2")
 					.fromTo("#content-container", 2, // fadeIn Content
 						{opacity: 0, filter: 'blur(12px)'}, 
-						{opacity: 1, filter: 'blur(0.01px)', duration: 10, ease: "power2.out"}, "-=2")
-					;
+						{opacity: 1, filter: 'blur(0.01px)', duration: 10, ease: "power2.out"}, "-=2");
 		}
 	</script>
 </html>
