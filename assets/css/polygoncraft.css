@@ -136,7 +136,7 @@ html {
 }
 
 #orendigo-head > p {
-	width: 500px;
+	min-width: 800px;
 	height: 20px;
 	font-family: Calibri;
 	font-size: 20pt;
