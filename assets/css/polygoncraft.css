@@ -72,3 +72,16 @@ body {
 	-o-transform:scaleY(-1);
 	transform:scaleY(-1);
 }
+
+#header-text-container {
+	background-image: url('../img/polygoncraft/The-Revival.png');
+	background-size: 50%;
+	background-repeat: no-repeat; 
+	height: 100px; 
+	background-position: center center;
+	margin: auto;
+	position: relative;
+	z-index: -1;
+	width: 60%;
+	min-width: 800px;
+}

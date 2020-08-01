@@ -27,6 +27,9 @@
 			<div id="header"></div>
 			<div id="header-bottom"></div>
 		</div>
+		<div id="header-text-container" style="filter: blur(0.01px); opacity: 0;">
+			<div id="header-text"></div>
+		</div>
 	</body>
 
 	<script type="text/javascript">
@@ -41,7 +44,14 @@
 						{opacity: 1, filter: 'blur(0.01px)', duration: 10, ease: "power2.out"},)
 					.fromTo("#header-container", 2, // moveY Greetings Text
 						{y:100}, 
-						{y:0}, "-=2");
+						{y:0}, "-=2")
+					.fromTo("#header-text-container", 2, // fadeIn Greetings Text
+						{opacity: 0, filter: 'blur(12px)'}, 
+						{opacity: 1, filter: 'blur(0.01px)', duration: 10, ease: "power2.out"},)
+					.fromTo("#header-text-container", 2, // moveY Greetings Text
+						{y:-100}, 
+						{y:0}, "-=2")
+					;
 		}
 	</script>
 </html>
